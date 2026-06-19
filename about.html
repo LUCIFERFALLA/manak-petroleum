@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>About · Manak Petroleum — 50+ Years of Lubricant Manufacturing in India</title>
+<meta name="description" content="Founded in 1973, Manak Petroleum is a three-generation family-owned manufacturer of lubricating greases and engine oils, headquartered in India." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/main.css" />
+<style>
+  /* About-specific */
+  .timeline{padding:clamp(64px,9vw,140px) 0;border-top:1px solid var(--line)}
+  .tl-row{
+    display:grid;grid-template-columns:160px 1fr 1.4fr;gap:48px;
+    padding:32px 0;border-bottom:1px solid var(--line);align-items:start;
+  }
+  .tl-row .year{font-weight:800;font-size:clamp(40px,4.6vw,68px);line-height:1;letter-spacing:-0.04em}
+  .tl-row .ev{font-size:22px;font-weight:700;letter-spacing:-0.015em;line-height:1.2}
+  .tl-row .body{color:var(--mute);font-size:15px;line-height:1.6;max-width:48ch}
+  @media (max-width:780px){
+    .tl-row{grid-template-columns:1fr;gap:12px}
+  }
+
+  .pillars{padding:clamp(64px,9vw,140px) 0;background:var(--ink);color:#fff}
+  .pillars h2{color:#fff}
+  .pillars .section-head .num{color:#7A776F}
+  .pillars .section-head .desc{color:#9C988E}
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark)}
+  .pillar{background:var(--ink);padding:40px 32px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:background .35s}
+  .pillar:hover{background:#050608}
+  .pillar .ic{width:48px;height:48px;border:1px solid #2A2F39;display:grid;place-items:center;margin-bottom:32px}
+  .pillar .ic svg{width:22px;height:22px;stroke:var(--red);fill:none;stroke-width:1.4}
+  .pillar h4{font-size:22px;font-weight:700;letter-spacing:-0.015em;line-height:1.2;color:#fff;margin-bottom:10px}
+  .pillar p{color:#9C988E;font-size:14.5px;line-height:1.55}
+  @media (max-width:900px){.pillar-grid{grid-template-columns:1fr}}
+
+  .plants{padding:clamp(64px,9vw,140px) 0}
+  .plant-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+  .plant{border:1px solid var(--line);overflow:hidden}
+  .plant .ph-slot{aspect-ratio:16/9;position:relative}
+  .plant-body{padding:32px}
+  .plant .tag{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:block;font-weight:500}
+  .plant h3{font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:8px}
+  .plant .loc{color:var(--mute);font-size:14px;margin-bottom:24px}
+  .plant ul{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;border-top:1px solid var(--line);padding-top:20px}
+  .plant ul li{font-size:13.5px;color:var(--ink-2);display:flex;justify-content:space-between}
+  .plant ul li span{color:var(--mute);font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  @media (max-width:780px){.plant-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-mark">M<span class="bar"></span></div>
+  <div class="loader-meta"><span>MANAK PETROLEUM · EST 1973</span><span>ABOUT</span></div>
+</div>
+
+<!-- NAV -->
+<header class="nav"><div class="nav-inner">
+  <a href="index.html" class="logo" aria-label="Manak Petroleum"><img class="logo-img" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto,e_trim,h_160/v1781785249/ChatGPT_Image_Jun_18_2026_05_50_15_PM_swybhi.png" alt="Manak Petroleum" /></a>
+  <span class="nav-iso"><span class="d"></span>ISO 9001:2015 Certified</span>
+  <nav class="nav-links" aria-label="Primary">
+    <div class="nav-item" data-nav="index.html"><a href="index.html">Home</a></div>
+
+    <div class="nav-item" data-nav="about.html"><a href="about.html">About <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown">
+        <div class="cat">Our Story</div>
+        <a class="ddl" href="about.html">Our Heritage</a>
+        <a class="ddl" href="about.html#timeline">Company Timeline</a>
+        <a class="ddl" href="about.html#facility">Our Facility</a>
+        <a class="ddl" href="about.html#principles">Operating Principles</a>
+        <div class="cat">Connect</div>
+        <a class="ddl" href="contact.html">Contact Us</a>
+        <a class="ddl ddl-red" href="private-label.html#form">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="products.html"><a href="products.html">Products <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown mega">
+        <div>
+          <div class="cat">By Category</div>
+          <a class="ddl" href="products.html#engine">Engine Oils</a>
+          <a class="ddl" href="products.html#gear">Gear &amp; Transmission</a>
+          <a class="ddl" href="products.html#industrial">Hydraulic &amp; Industrial</a>
+          <a class="ddl" href="products.html#grease">Greases</a>
+          <a class="ddl" href="products.html#specialty">Specialty &amp; Coolant</a>
+        </div>
+        <div>
+          <div class="cat">By Brand</div>
+          <a class="ddl" href="brands.html#zigma">ZIGMA Range<span class="sub">Automotive &amp; Industrial</span></a>
+          <a class="ddl" href="brands.html#emtex">EMTEX Range<span class="sub">Premium Heavy-Duty Industrial</span></a>
+          <a class="ddl ddl-red" href="products.html">View All Products &rarr;</a>
+        </div>
+        <a class="dd-feature" href="product.html">
+          <div class="ph"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774609/Screenshot_2026-06-18_144502_jzvupc.png" alt="ZIGMA CH-4 15W-40"/></div>
+          <div class="ft"><div class="lab">Featured · Engine Oil</div><h5>CH-4 15W-40</h5><div class="s">API CH-4 · Heavy diesel · 10 L</div><span style="color:var(--red);font-size:13px;font-weight:600">View spec sheet &rarr;</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="private-label.html"><a href="private-label.html">Private Label <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown" style="min-width:262px">
+        <div class="cat">How it works</div>
+        <a class="ddl" href="private-label.html">Overview</a>
+        <a class="ddl" href="private-label.html#process">The 4-Step Process</a>
+        <a class="ddl" href="private-label.html#capabilities">Our Capabilities</a>
+        <a class="ddl" href="private-label.html#moq">MOQ &amp; Engagement Tiers</a>
+        <a class="ddl" href="private-label.html#faq">FAQ</a>
+        <div class="cat">Get started</div>
+        <a class="dd-btn" href="private-label.html#form">Start a Project</a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="brands.html"><a href="brands.html">Brands <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown cols2">
+        <div>
+          <div class="cat">ZIGMA</div>
+          <a class="ddl" href="brands.html#zigma">Brand Overview</a>
+          <a class="ddl" href="products.html#zigma-engine">Engine Oils</a>
+          <a class="ddl" href="products.html#zigma-gear">Gear Oils</a>
+          <a class="ddl" href="products.html#zigma-grease">Greases</a>
+          <a class="ddl ddl-red" href="brands.html#zigma">View all ZIGMA &rarr;</a>
+        </div>
+        <div>
+          <div class="cat">EMTEX</div>
+          <a class="ddl" href="brands.html#emtex">Brand Overview</a>
+          <a class="ddl" href="products.html#emtex-engine">Engine Oils</a>
+          <a class="ddl" href="products.html#emtex-gear">Gear Oils</a>
+          <a class="ddl" href="products.html#emtex-specialty">Coolants</a>
+          <a class="ddl ddl-red" href="brands.html#emtex">View all EMTEX &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="industries.html"><a href="industries.html">Industries <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown cols2 dd-right">
+        <div>
+          <div class="cat">Industries</div>
+          <a class="ddl" href="industries.html#automotive">Automotive &amp; CV</a>
+          <a class="ddl" href="industries.html#steel">Steel &amp; Mining</a>
+          <a class="ddl" href="industries.html#construction">Construction</a>
+          <a class="ddl" href="industries.html#agriculture">Agriculture</a>
+        </div>
+        <div>
+          <div class="cat">&nbsp;</div>
+          <a class="ddl" href="industries.html#manufacturing">Manufacturing</a>
+          <a class="ddl" href="industries.html#marine">Marine</a>
+          <a class="ddl" href="industries.html">Logistics &amp; Fleet</a>
+          <div class="dd-divider"></div>
+          <a class="ddl ddl-red" href="industries.html">All Industries &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="distributors.html"><a href="distributors.html">Distributors <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown dd-right" style="min-width:248px">
+        <div class="cat">Partnership</div>
+        <a class="ddl" href="distributors.html#why">Why Partner with Manak</a>
+        <a class="ddl" href="distributors.html#territories">Territory Openings</a>
+        <a class="ddl" href="distributors.html#requirements">Partner Requirements</a>
+        <a class="dd-btn" href="distributors.html#apply">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+  <a href="contact.html" class="nav-cta">Request a Quote <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</div></header>
+
+
+<!-- DRAWER -->
+<aside class="drawer" aria-hidden="true">
+  <nav class="drawer-acc" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <details>
+      <summary>About <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">Our Story</span>
+        <a href="about.html">Our Heritage</a>
+        <a href="about.html#timeline">Company Timeline</a>
+        <a href="about.html#facility">Our Facility</a>
+        <a href="about.html#principles">Operating Principles</a>
+        <span class="cat">Connect</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </details>
+    <details>
+      <summary>Products <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">By Category</span>
+        <a href="products.html#engine">Engine Oils</a>
+        <a href="products.html#gear">Gear &amp; Transmission</a>
+        <a href="products.html#industrial">Hydraulic &amp; Industrial</a>
+        <a href="products.html#grease">Greases</a>
+        <a href="products.html#specialty">Specialty &amp; Coolant</a>
+        <span class="cat">By Brand</span>
+        <a href="brands.html#zigma">ZIGMA Range</a>
+        <a href="brands.html#emtex">EMTEX Range</a>
+        <a href="products.html">View All Products</a>
+      </div>
+    </details>
+    <details>
+      <summary>Private Label <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="private-label.html">Overview</a>
+        <a href="private-label.html#process">The 4-Step Process</a>
+        <a href="private-label.html#capabilities">Our Capabilities</a>
+        <a href="private-label.html#moq">MOQ &amp; Engagement Tiers</a>
+        <a href="private-label.html#faq">FAQ</a>
+        <a href="private-label.html#form">Start a Project</a>
+      </div>
+    </details>
+    <details>
+      <summary>Brands <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">ZIGMA</span>
+        <a href="brands.html#zigma">Brand Overview</a>
+        <span class="cat">EMTEX</span>
+        <a href="brands.html#emtex">Brand Overview</a>
+        <a href="products.html">View All Products</a>
+      </div>
+    </details>
+    <details>
+      <summary>Industries <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="industries.html#automotive">Automotive &amp; CV</a>
+        <a href="industries.html#steel">Steel &amp; Mining</a>
+        <a href="industries.html#construction">Construction</a>
+        <a href="industries.html#agriculture">Agriculture</a>
+        <a href="industries.html#manufacturing">Manufacturing</a>
+        <a href="industries.html#marine">Marine</a>
+        <a href="industries.html">All Industries</a>
+      </div>
+    </details>
+    <details>
+      <summary>Distributors <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="distributors.html#why">Why Partner with Manak</a>
+        <a href="distributors.html#territories">Territory Openings</a>
+        <a href="distributors.html#requirements">Partner Requirements</a>
+        <a href="distributors.html#apply">Apply Now</a>
+      </div>
+    </details>
+  </nav>
+  <div class="drawer-foot">
+    <span>Get in touch</span>
+    <a href="tel:+919739095494">+91 97390 95494</a>
+    <a href="mailto:manakgrease@gmail.com">manakgrease@gmail.com</a>
+  </div>
+  <div class="drawer-cta"><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
+</aside>
+
+
+<!-- PAGE HEAD -->
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumbs reveal"><a href="index.html">Home</a> / <span>About</span></div>
+    <h1 class="reveal-up">Three generations.<br/><em>One standard</em> of quality.</h1>
+    <div class="page-head-grid">
+      <p class="reveal">Founded in 1973 and headquartered in India, Manak Petroleum has spent five decades formulating, testing, and manufacturing lubricating greases and engine oils for the industries that built this country.</p>
+      <div class="reveal" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
+        <a href="private-label.html" class="btn btn-primary">Work with us <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        <a href="#facility" class="btn">Tour the facility</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY / Editorial block -->
+<section class="split">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start" class="story-grid">
+      <div class="reveal">
+        <span class="eyebrow">/ The origin</span>
+        <h2 class="heading-1" style="margin-top:24px">A family-run manufacturer that has never stopped specifying for the long haul.</h2>
+      </div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:20px">
+        <p class="lede">In 1973, with a single blending kettle and a deep belief that India's industrial future would be lubricated by Indian formulators, the first batch of Manak grease left the floor.</p>
+        <p style="color:var(--ink-2);font-size:15.5px;line-height:1.7">Fifty years later, that kettle has become a fully integrated, ISO-certified manufacturing facility at Harohalli, Bengaluru. The team has grown to dozens of qualified chemists, plant operators, and field engineers. The clients have grown from a handful of regional workshops to multinational brands and billion-rupee distributors.</p>
+        <p style="color:var(--ink-2);font-size:15.5px;line-height:1.7">What hasn't changed is the standard. Every drum that leaves Harohalli carries the same accountability it did fifty years ago — Quality First. No exceptions.</p>
+      </div>
+    </div>
+  </div>
+  <style>@media(max-width:900px){.story-grid{grid-template-columns:1fr !important;gap:32px !important}}</style>
+</section>
+
+<!-- FACILITY VIDEO BAND -->
+<section style="padding:0 0 clamp(64px,9vw,140px)">
+  <div class="wrap">
+    <div class="reveal-up" style="position:relative;aspect-ratio:16/7;overflow:hidden;border:1px solid var(--line)">
+      <div class="media scrim" style="position:absolute">
+        <video autoplay muted loop playsinline preload="none"
+          poster="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto,so_0/v1781793829/0618_2_1_n04ghv.jpg">
+          <source src="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto/v1781793829/0618_2_1_n04ghv.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div style="position:absolute;left:0;bottom:0;z-index:3;padding:clamp(24px,4vw,48px);color:#fff;max-width:32ch">
+        <div class="eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:14px">/ Inside the lab</div>
+        <div style="font-size:clamp(22px,2.6vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15">Every batch validated by qualified chemists before it ships.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="timeline">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">Timeline</span>
+      <h2 class="reveal">Fifty years,<br/>told in milestones.</h2>
+      <p class="desc reveal">A condensed history of how a single-plant grease manufacturer grew into a pan-India lubricant company serving multinational brands.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-row reveal"><div class="year">1973</div><div class="ev">Founding</div><div class="body">Manak Petroleum is established with a singular focus on lubricating greases for India's emerging industrial sector.</div></div>
+      <div class="tl-row reveal"><div class="year">1985</div><div class="ev">Lithium &amp; calcium-base expansion</div><div class="body">Product range expands to include lithium-base and calcium-base EP greases for heavy-duty automotive and construction applications.</div></div>
+      <div class="tl-row reveal"><div class="year">1998</div><div class="ev">Engine oils added</div><div class="body">Manufacturing capability is extended to engine and gear oils, opening the company to the fast-growing commercial vehicle market.</div></div>
+      <div class="tl-row reveal"><div class="year">2008</div><div class="ev">ISO 9001 certification</div><div class="body">Quality management system formally certified to ISO 9001 — institutionalising the protocols that had been practiced for decades.</div></div>
+      <div class="tl-row reveal"><div class="year">2014</div><div class="ev">Harohalli plant commissioned</div><div class="body">The Harohalli manufacturing facility is commissioned in Bengaluru, consolidating production, filling, and warehousing on one integrated site.</div></div>
+      <div class="tl-row reveal"><div class="year">2019</div><div class="ev">ISO 17025 accredited lab</div><div class="body">In-house R&amp;D laboratory accredited to ISO 17025:2017, enabling independent test results for private-label clients.</div></div>
+      <div class="tl-row reveal"><div class="year">2024</div><div class="ev">22,000 MT + KL capacity</div><div class="body">Combined annual capacity crosses 22,000 tonnes — among the largest independent lubricant manufacturers in the country.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANTS -->
+<section class="plants" id="facility">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">Our Facility</span>
+      <h2 class="reveal">One integrated facility.<br/>Harohalli, Bengaluru.</h2>
+      <p class="desc reveal">A single, fully integrated manufacturing site at the Harohalli Industrial Area — production, filling, warehousing, and an accredited R&amp;D laboratory under one roof.</p>
+    </div>
+
+    <div class="plant-grid">
+      <div class="plant reveal-up">
+        <div class="ph-slot"><div class="media scrim">
+          <video muted loop playsinline preload="none"
+            poster="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto,so_0/v1781793930/0618_2_bjbrve.jpg">
+            <source src="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto/v1781793930/0618_2_bjbrve.mp4" type="video/mp4" />
+          </video>
+          <div class="ph-label">Harohalli · Warehouse &amp; dispatch</div>
+        </div></div>
+        <div class="plant-body">
+          <span class="tag">Production &amp; Filling</span>
+          <h3>Manufacturing &amp; Logistics</h3>
+          <div class="loc">Harohalli Industrial Area, Bengaluru · Karnataka</div>
+          <ul>
+            <li>Grease capacity <span>/ 10,000 MT</span></li>
+            <li>Oil capacity <span>/ 12,000 KL</span></li>
+            <li>Filling lines <span>/ Drum &amp; pail</span></li>
+            <li>Warehouse <span>/ Bulk &amp; palletised</span></li>
+            <li>Dispatch <span>/ Pan-India</span></li>
+            <li>Standard <span>/ ISO 9001:2015</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plant reveal-up">
+        <div class="ph-slot"><div class="media scrim">
+          <video muted loop playsinline preload="none"
+            poster="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto,so_0/v1781793829/0618_2_1_n04ghv.jpg">
+            <source src="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto/v1781793829/0618_2_1_n04ghv.mp4" type="video/mp4" />
+          </video>
+          <div class="ph-label">Harohalli · ISO 17025 R&amp;D lab</div>
+        </div></div>
+        <div class="plant-body">
+          <span class="tag">R&amp;D &amp; Quality</span>
+          <h3>Accredited Laboratory</h3>
+          <div class="loc">On-site R&amp;D &amp; quality-control laboratory</div>
+          <ul>
+            <li>Accreditation <span>/ ISO 17025:2017</span></li>
+            <li>Testing <span>/ ASTM · IP · BIS</span></li>
+            <li>Team <span>/ Qualified chemists</span></li>
+            <li>Per batch <span>/ COA issued</span></li>
+            <li>Specs <span>/ IS · API · NLGI</span></li>
+            <li>R&amp;D <span>/ Custom formulation</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS / dark -->
+<section class="pillars" id="principles">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal" style="color:#7A776F">Operating principles</span>
+      <h2 class="reveal">What we defend,<br/>batch after batch.</h2>
+      <p class="desc reveal">Internally we don't call them values. We call them commitments — because they are tested every single day on the manufacturing floor.</p>
+    </div>
+
+    <div class="pillar-grid">
+      <div class="pillar reveal-up">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+        <div>
+          <h4>Quality First.</h4>
+          <p>No exceptions. Every batch is tested to IS, API, and NLGI specifications and signed off before release. We don't ship what we wouldn't run in our own engines.</p>
+        </div>
+      </div>
+      <div class="pillar reveal-up">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 22c0-5 3-8 7-8s7 3 7 8"/></svg></div>
+        <div>
+          <h4>Customer Focus.</h4>
+          <p>Formulations are driven by your application — not catalogue convenience. We listen first, run trials second, ship third.</p>
+        </div>
+      </div>
+      <div class="pillar reveal-up">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10C6.5 21 3 17 3 12V6l9-4z"/></svg></div>
+        <div>
+          <h4>HSE.</h4>
+          <p>Health, Safety and Environment are non-negotiable. Effluent control, fire safety, and PPE compliance across the facility — verified, not assumed.</p>
+        </div>
+      </div>
+      <div class="pillar reveal-up">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3v6L4 14l5 5h6l5-5-5-5V3"/></svg></div>
+        <div>
+          <h4>Innovation.</h4>
+          <p>An accredited R&amp;D lab and qualified chemists constantly improving formulations for evolving duty cycles — biodegradable bases, low-SAPS additives, EV-grade fluids.</p>
+        </div>
+      </div>
+      <div class="pillar reveal-up">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+        <div>
+          <h4>Documentation.</h4>
+          <p>Every batch ships with a Certificate of Analysis. Every formulation has a written specification. Every change is traceable, every quarter, every year.</p>
+        </div>
+      </div>
+      <div class="pillar reveal-up">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <div>
+          <h4>Supply Reliability.</h4>
+          <p>Multi-source base-oil contracts and dual-plant production protect our clients from supply shocks. Twelve-month rolling commitments. No ghost shipments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal" style="color:rgba(255,255,255,.65);display:block;margin-bottom:32px">05 / Get in touch</span>
+    <h2 class="reveal-up">Five decades in.<br/><em>Just getting started.</em></h2>
+    <div class="cta-actions reveal" style="margin-top:48px">
+      <a href="contact.html" class="btn btn-primary">Visit a plant <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+      <a href="private-label.html" class="btn">Start a private label</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand-mark"><span class="logo-word"><span class="l1">MANAK PETROLEUM</span><span class="l2">EST. 1973</span></span></div>
+        <p class="brand-line">India's trusted manufacturer of lubricating greases and engine oils. ISO 9001:2015 &amp; ISO 17025:2017. Manufactured in India since 1973.</p>
+      </div>
+      <div><h4>Capabilities</h4><ul><li><a href="private-label.html">Private Label</a></li><li><a href="products.html">Products</a></li><li><a href="brands.html">In-House Brands</a></li><li><a href="distributors.html">Distributors</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About / Heritage</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="tel:+919739095494">+91 97390 95494</a></li><li><a href="tel:+919739966560">+91 97399 66560</a></li><li><a href="mailto:manakgrease@gmail.com">manakgrease@gmail.com</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Manak Petroleum 1973 — 2026</span>
+      <span>Manufactured in India · Dispatched Pan-India</span>
+      <span>ISO 9001:2015 · ISO 17025:2017</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Our Brands — ZIGMA &amp; EMTEX · Manak Petroleum</title>
+<meta name="description" content="ZIGMA — premium automotive lubricants. EMTEX (M-Tex) — industrial-grade engine oils and greases. Two proprietary lubricant brands, sold through India's most trusted B2B distributor network." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/main.css" />
+<style>
+  .brand-block{padding:clamp(80px,11vw,160px) 0;position:relative;overflow:hidden}
+  .brand-block.dark{background:var(--ink);color:#fff}
+  .brand-block.dark h2{color:#fff}
+  .brand-block.dark .desc-block p{color:#C8C5BC}
+  .brand-block.dark .b-meta{color:#9C988E}
+
+  .brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .brand-left .b-eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:24px;font-weight:500;display:flex;align-items:center;gap:12px}
+  .brand-left .b-eyebrow::before{content:"";width:24px;height:1px;background:var(--red)}
+  .brand-name{
+    font-weight:900;font-size:clamp(72px,12vw,180px);line-height:.9;letter-spacing:-0.05em;
+    margin-bottom:32px;
+  }
+  .brand-name em{font-style:italic;font-weight:900;color:var(--red)}
+  .brand-block.dark .brand-name em{color:var(--red)}
+  .brand-tagline{font-size:clamp(20px,2vw,28px);font-weight:600;letter-spacing:-0.015em;line-height:1.2;margin-bottom:32px;max-width:18ch}
+  .desc-block p{font-size:16px;line-height:1.65;color:var(--ink-2);margin-bottom:16px;max-width:42ch}
+  .b-meta{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+  .brand-block.dark .b-meta{border-top-color:var(--line-dark)}
+  .b-meta .it{display:flex;flex-direction:column;gap:4px}
+  .b-meta .it .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:500}
+  .brand-block.dark .b-meta .it .k{color:#7A776F}
+  .b-meta .it .v{font-size:17px;font-weight:600;letter-spacing:-0.01em}
+
+  .b-products{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .b-product{
+    background:var(--paper);border:1px solid var(--line);padding:22px;
+    display:flex;flex-direction:column;gap:10px;min-height:200px;
+    transition:border-color .35s, transform .35s;
+  }
+  .brand-block.dark .b-product{background:var(--steel);border-color:var(--line-dark)}
+  .b-product:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .brand-block.dark .b-product:hover{border-color:#fff;background:#0F1218}
+  .b-product .head{display:flex;justify-content:space-between;align-items:flex-start}
+  .b-product .head .ic{
+    width:64px;height:80px;
+    background:linear-gradient(180deg,var(--ink) 0%, #1F2126 100%);
+    border-radius:4px 4px 6px 6px;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;padding:6px;
+  }
+  .brand-block.dark .b-product .head .ic{background:linear-gradient(180deg,#fff 0%,#E6E4DF 100%)}
+  .b-product .head .ic .strip{background:var(--red);color:#fff;padding:2px 5px;font-family:var(--f-mono);font-size:7px;letter-spacing:.12em;width:90%;text-align:center}
+  .b-product .head .ic .lbl{color:#fff;font-weight:800;font-size:9px;margin-top:3px;letter-spacing:-0.01em;line-height:1;text-align:center}
+  .brand-block.dark .b-product .head .ic .lbl{color:var(--ink)}
+  .b-product .nm{font-size:18px;font-weight:700;letter-spacing:-0.015em;line-height:1.2}
+  .b-product .gr{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--mute);margin-top:auto}
+  .brand-block.dark .b-product .gr{color:#9C988E}
+  .b-product .specs{display:flex;flex-wrap:wrap;gap:4px}
+  .b-product .specs .spec-chip{font-size:9.5px;padding:3px 7px}
+
+  /* real product thumbnail */
+  .b-thumb{position:relative;width:100%;aspect-ratio:1.5/1;border:1px solid var(--line);overflow:hidden;margin-bottom:4px}
+  .brand-block.dark .b-thumb{border-color:var(--line-dark)}
+  .b-thumb .prod-fill img{padding:8%}
+  /* emtex typographic card */
+  .b-product.txt .big{font-weight:900;font-size:36px;letter-spacing:-0.03em;line-height:1;color:#fff}
+  .b-product.txt .tagk{font-family:var(--f-mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:auto}
+
+  @media (max-width:980px){
+    .brand-grid{grid-template-columns:1fr;gap:48px}
+    .b-products{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark">M<span class="bar"></span></div><div class="loader-meta"><span>MANAK PETROLEUM · EST 1973</span><span>BRANDS</span></div></div>
+
+<header class="nav"><div class="nav-inner">
+  <a href="index.html" class="logo" aria-label="Manak Petroleum"><img class="logo-img" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto,e_trim,h_160/v1781785249/ChatGPT_Image_Jun_18_2026_05_50_15_PM_swybhi.png" alt="Manak Petroleum" /></a>
+  <span class="nav-iso"><span class="d"></span>ISO 9001:2015 Certified</span>
+  <nav class="nav-links" aria-label="Primary">
+    <div class="nav-item" data-nav="index.html"><a href="index.html">Home</a></div>
+
+    <div class="nav-item" data-nav="about.html"><a href="about.html">About <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown">
+        <div class="cat">Our Story</div>
+        <a class="ddl" href="about.html">Our Heritage</a>
+        <a class="ddl" href="about.html#timeline">Company Timeline</a>
+        <a class="ddl" href="about.html#facility">Our Facility</a>
+        <a class="ddl" href="about.html#principles">Operating Principles</a>
+        <div class="cat">Connect</div>
+        <a class="ddl" href="contact.html">Contact Us</a>
+        <a class="ddl ddl-red" href="private-label.html#form">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="products.html"><a href="products.html">Products <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown mega">
+        <div>
+          <div class="cat">By Category</div>
+          <a class="ddl" href="products.html#engine">Engine Oils</a>
+          <a class="ddl" href="products.html#gear">Gear &amp; Transmission</a>
+          <a class="ddl" href="products.html#industrial">Hydraulic &amp; Industrial</a>
+          <a class="ddl" href="products.html#grease">Greases</a>
+          <a class="ddl" href="products.html#specialty">Specialty &amp; Coolant</a>
+        </div>
+        <div>
+          <div class="cat">By Brand</div>
+          <a class="ddl" href="brands.html#zigma">ZIGMA Range<span class="sub">Automotive &amp; Industrial</span></a>
+          <a class="ddl" href="brands.html#emtex">EMTEX Range<span class="sub">Premium Heavy-Duty Industrial</span></a>
+          <a class="ddl ddl-red" href="products.html">View All Products &rarr;</a>
+        </div>
+        <a class="dd-feature" href="product.html">
+          <div class="ph"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774609/Screenshot_2026-06-18_144502_jzvupc.png" alt="ZIGMA CH-4 15W-40"/></div>
+          <div class="ft"><div class="lab">Featured · Engine Oil</div><h5>CH-4 15W-40</h5><div class="s">API CH-4 · Heavy diesel · 10 L</div><span style="color:var(--red);font-size:13px;font-weight:600">View spec sheet &rarr;</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="private-label.html"><a href="private-label.html">Private Label <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown" style="min-width:262px">
+        <div class="cat">How it works</div>
+        <a class="ddl" href="private-label.html">Overview</a>
+        <a class="ddl" href="private-label.html#process">The 4-Step Process</a>
+        <a class="ddl" href="private-label.html#capabilities">Our Capabilities</a>
+        <a class="ddl" href="private-label.html#moq">MOQ &amp; Engagement Tiers</a>
+        <a class="ddl" href="private-label.html#faq">FAQ</a>
+        <div class="cat">Get started</div>
+        <a class="dd-btn" href="private-label.html#form">Start a Project</a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="brands.html"><a href="brands.html">Brands <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown cols2">
+        <div>
+          <div class="cat">ZIGMA</div>
+          <a class="ddl" href="brands.html#zigma">Brand Overview</a>
+          <a class="ddl" href="products.html#zigma-engine">Engine Oils</a>
+          <a class="ddl" href="products.html#zigma-gear">Gear Oils</a>
+          <a class="ddl" href="products.html#zigma-grease">Greases</a>
+          <a class="ddl ddl-red" href="brands.html#zigma">View all ZIGMA &rarr;</a>
+        </div>
+        <div>
+          <div class="cat">EMTEX</div>
+          <a class="ddl" href="brands.html#emtex">Brand Overview</a>
+          <a class="ddl" href="products.html#emtex-engine">Engine Oils</a>
+          <a class="ddl" href="products.html#emtex-gear">Gear Oils</a>
+          <a class="ddl" href="products.html#emtex-specialty">Coolants</a>
+          <a class="ddl ddl-red" href="brands.html#emtex">View all EMTEX &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="industries.html"><a href="industries.html">Industries <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown cols2 dd-right">
+        <div>
+          <div class="cat">Industries</div>
+          <a class="ddl" href="industries.html#automotive">Automotive &amp; CV</a>
+          <a class="ddl" href="industries.html#steel">Steel &amp; Mining</a>
+          <a class="ddl" href="industries.html#construction">Construction</a>
+          <a class="ddl" href="industries.html#agriculture">Agriculture</a>
+        </div>
+        <div>
+          <div class="cat">&nbsp;</div>
+          <a class="ddl" href="industries.html#manufacturing">Manufacturing</a>
+          <a class="ddl" href="industries.html#marine">Marine</a>
+          <a class="ddl" href="industries.html">Logistics &amp; Fleet</a>
+          <div class="dd-divider"></div>
+          <a class="ddl ddl-red" href="industries.html">All Industries &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="distributors.html"><a href="distributors.html">Distributors <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown dd-right" style="min-width:248px">
+        <div class="cat">Partnership</div>
+        <a class="ddl" href="distributors.html#why">Why Partner with Manak</a>
+        <a class="ddl" href="distributors.html#territories">Territory Openings</a>
+        <a class="ddl" href="distributors.html#requirements">Partner Requirements</a>
+        <a class="dd-btn" href="distributors.html#apply">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+  <a href="contact.html" class="nav-cta">Request a Quote <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</div></header>
+
+
+<aside class="drawer" aria-hidden="true">
+  <nav class="drawer-acc" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <details>
+      <summary>About <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">Our Story</span>
+        <a href="about.html">Our Heritage</a>
+        <a href="about.html#timeline">Company Timeline</a>
+        <a href="about.html#facility">Our Facility</a>
+        <a href="about.html#principles">Operating Principles</a>
+        <span class="cat">Connect</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </details>
+    <details>
+      <summary>Products <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">By Category</span>
+        <a href="products.html#engine">Engine Oils</a>
+        <a href="products.html#gear">Gear &amp; Transmission</a>
+        <a href="products.html#industrial">Hydraulic &amp; Industrial</a>
+        <a href="products.html#grease">Greases</a>
+        <a href="products.html#specialty">Specialty &amp; Coolant</a>
+        <span class="cat">By Brand</span>
+        <a href="brands.html#zigma">ZIGMA Range</a>
+        <a href="brands.html#emtex">EMTEX Range</a>
+        <a href="products.html">View All Products</a>
+      </div>
+    </details>
+    <details>
+      <summary>Private Label <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="private-label.html">Overview</a>
+        <a href="private-label.html#process">The 4-Step Process</a>
+        <a href="private-label.html#capabilities">Our Capabilities</a>
+        <a href="private-label.html#moq">MOQ &amp; Engagement Tiers</a>
+        <a href="private-label.html#faq">FAQ</a>
+        <a href="private-label.html#form">Start a Project</a>
+      </div>
+    </details>
+    <details>
+      <summary>Brands <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">ZIGMA</span>
+        <a href="brands.html#zigma">Brand Overview</a>
+        <span class="cat">EMTEX</span>
+        <a href="brands.html#emtex">Brand Overview</a>
+        <a href="products.html">View All Products</a>
+      </div>
+    </details>
+    <details>
+      <summary>Industries <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="industries.html#automotive">Automotive &amp; CV</a>
+        <a href="industries.html#steel">Steel &amp; Mining</a>
+        <a href="industries.html#construction">Construction</a>
+        <a href="industries.html#agriculture">Agriculture</a>
+        <a href="industries.html#manufacturing">Manufacturing</a>
+        <a href="industries.html#marine">Marine</a>
+        <a href="industries.html">All Industries</a>
+      </div>
+    </details>
+    <details>
+      <summary>Distributors <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="distributors.html#why">Why Partner with Manak</a>
+        <a href="distributors.html#territories">Territory Openings</a>
+        <a href="distributors.html#requirements">Partner Requirements</a>
+        <a href="distributors.html#apply">Apply Now</a>
+      </div>
+    </details>
+  </nav>
+  <div class="drawer-foot">
+    <span>Get in touch</span>
+    <a href="tel:+919739095494">+91 97390 95494</a>
+    <a href="mailto:manakgrease@gmail.com">manakgrease@gmail.com</a>
+  </div>
+  <div class="drawer-cta"><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
+</aside>
+
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumbs reveal"><a href="index.html">Home</a> / <span>Brands</span></div>
+    <h1 class="reveal-up">Two brands.<br/>One <em>manufacturing</em> standard.</h1>
+    <div class="page-head-grid">
+      <p class="reveal">Our two proprietary brands serve different markets, but share the same facility, the same chemists, and the same fifty-year track record of predictability.</p>
+      <div class="reveal" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
+        <a href="distributors.html" class="btn btn-primary">Become a distributor <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        <a href="products.html" class="btn">View products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ZIGMA ===== -->
+<section class="brand-block" id="zigma">
+  <div class="wrap">
+    <div class="brand-grid">
+      <div class="brand-left">
+        <div class="b-eyebrow reveal">/ Brand 01 · Automotive &amp; Industrial</div>
+        <div class="brand-name reveal-up">ZIG<em>MA.</em></div>
+        <div class="brand-tagline reveal">Your Trust, Our Responsibility — lubricants engineered for the Indian road.</div>
+        <div class="desc-block reveal">
+          <p>ZIGMA is our flagship retail brand — a complete range of engine oils, gear oils, hydraulics and greases formulated for India's commercial fleets, two-wheelers, tractors and industrial machinery.</p>
+          <p>Built on premium base oils and modern additive technology, every ZIGMA SKU is manufactured to ISO 9001:2015 and tested before it leaves the floor. The MPC Economy Series delivers performance at a workshop-friendly price.</p>
+        </div>
+        <div class="b-meta">
+          <div class="it"><div class="k">Category</div><div class="v">Engine · Gear · Hydraulic · Grease</div></div>
+          <div class="it"><div class="k">Positioning</div><div class="v">Economy / Performance</div></div>
+          <div class="it"><div class="k">Channels</div><div class="v">Distributors · Workshops · Fleet</div></div>
+          <div class="it"><div class="k">Standard</div><div class="v">ISO 9001:2015</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="b-products">
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774609/Screenshot_2026-06-18_144502_jzvupc.png" alt="ZIGMA CH-4 15W40"/></div></div>
+            <div class="nm">ZIGMA CH-4 15W-40</div>
+            <div class="specs"><span class="spec-chip">HCV</span><span class="spec-chip">API CH-4</span></div>
+            <div class="gr">HEAVY DIESEL · 10 L</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774609/Screenshot_2026-06-18_144509_h4upqr.png" alt="ZIGMA CF-4 20W40"/></div></div>
+            <div class="nm">ZIGMA CF-4 20W-40</div>
+            <div class="specs"><span class="spec-chip">CV</span><span class="spec-chip">API CF-4</span></div>
+            <div class="gr">MULTIGRADE · 7.5 L</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774004/Screenshot_2026-06-18_143920_sd1c3e.png" alt="ZIGMA 4T 20W40"/></div></div>
+            <div class="nm">ZIGMA 4T SL 20W-40</div>
+            <div class="specs"><span class="spec-chip">2-WHEEL</span><span class="spec-chip">API SL</span></div>
+            <div class="gr">4-STROKE · 1 L</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774885/Screenshot_2026-06-18_145735_lfeh7i.png" alt="ZIGMA UTTO"/></div></div>
+            <div class="nm">ZIGMA UTTO</div>
+            <div class="specs"><span class="spec-chip">TRACTOR</span><span class="spec-chip">TRANS</span></div>
+            <div class="gr">UNIVERSAL TRANS · 5 L</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774885/Screenshot_2026-06-18_145651_rrolec.png" alt="ZIGMA EP-140 gear oil"/></div></div>
+            <div class="nm">ZIGMA EP-140 GL-4</div>
+            <div class="specs"><span class="spec-chip">GL-4</span><span class="spec-chip">GEAR</span></div>
+            <div class="gr">HI-PERFORMANCE · 25 L</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774005/Screenshot_2026-06-18_144017_vlrs51.png" alt="ZIGMA hydraulic AW-68"/></div></div>
+            <div class="nm">ZIGMA Hydraulic AW-68</div>
+            <div class="specs"><span class="spec-chip">VG 68</span><span class="spec-chip">AW</span></div>
+            <div class="gr">ANTI-WEAR · 25 L</div>
+          </a>
+        </div>
+
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="products.html" class="link-arrow">View all ZIGMA products <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EMTEX ===== -->
+<section class="brand-block dark" id="emtex">
+  <div class="wrap">
+    <div class="brand-grid">
+      <div class="brand-left">
+        <div class="b-eyebrow reveal">/ Brand 02 · Premium Industrial &amp; Automotive</div>
+        <div class="brand-name reveal-up">EM<em>TEX.</em></div>
+        <div class="brand-tagline reveal">Premium engine oils, gear oils and greases — the heavy-duty industrial line.</div>
+        <div class="desc-block reveal">
+          <p>EMTEX is our premium line — heavy-duty diesel engine oils (TC Qwik, Chota Hathi, Xpresso), the Gear Protact gear-oil family, Drivtech motorcycle oils, AP Long Run greases, and Cooltech coolant.</p>
+          <p>Formulated to IS, API and NLGI specifications and trusted by commercial fleets, manufacturers, and earth-moving operators across India.</p>
+        </div>
+        <div class="b-meta">
+          <div class="it"><div class="k">Category</div><div class="v">Engine · Gear · Grease · Coolant</div></div>
+          <div class="it"><div class="k">Positioning</div><div class="v">Premium / Heavy Duty</div></div>
+          <div class="it"><div class="k">Channels</div><div class="v">Industrial distributors · OEM</div></div>
+          <div class="it"><div class="k">Standard</div><div class="v">IS · API · NLGI</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="b-products">
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781784513/Screenshot_2026-06-18_172530_stds9y.png" alt="EMTEX TC Qwik 15W-40 CI-4 Plus"/></div></div>
+            <div class="nm">TC Qwik 15W-40</div>
+            <div class="specs"><span class="spec-chip">CI-4 PLUS</span><span class="spec-chip">HD DIESEL</span></div>
+            <div class="gr">HEAVY-DUTY DIESEL ENGINE OIL</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781784513/Screenshot_2026-06-18_172549_wnmd4t.png" alt="EMTEX Chota Hathi 15W40"/></div></div>
+            <div class="nm">Chota Hathi 15W-40</div>
+            <div class="specs"><span class="spec-chip">CV</span><span class="spec-chip">5 L</span></div>
+            <div class="gr">HEAVY-DUTY DIESEL ENGINE OIL</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781784515/Screenshot_2026-06-18_173608_imat1b.png" alt="EMTEX Gear Protact EP-140 GL-4"/></div></div>
+            <div class="nm">Gear Protact EP-140</div>
+            <div class="specs"><span class="spec-chip">GL-4</span><span class="spec-chip">26 L</span></div>
+            <div class="gr">EXTREME PRESSURE GEAR OIL</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781784514/Screenshot_2026-06-18_173434_dql2sm.png" alt="EMTEX AP Long Run 35000 grease"/></div></div>
+            <div class="nm">AP Long Run 35000</div>
+            <div class="specs"><span class="spec-chip">LITHIUM CX</span><span class="spec-chip">IS 14847</span></div>
+            <div class="gr">HIGH-DROP-POINT GREASE</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781784514/Screenshot_2026-06-18_173503_bncpgm.png" alt="EMTEX GPEP-2 grease for earth moving equipment"/></div></div>
+            <div class="nm">GPEP-2 Grease</div>
+            <div class="specs"><span class="spec-chip">EP</span><span class="spec-chip">EARTH MOVING</span></div>
+            <div class="gr">GENERAL-PURPOSE EP GREASE</div>
+          </a>
+          <a href="products.html" class="b-product reveal-up">
+            <div class="b-thumb"><div class="prod-fill"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781784515/Screenshot_2026-06-18_173654_kfushc.png" alt="EMTEX Cooltech antifreeze coolant"/></div></div>
+            <div class="nm">Cooltech Coolant</div>
+            <div class="specs"><span class="spec-chip">ETHYLENE GLYCOL</span><span class="spec-chip">ANTIFREEZE</span></div>
+            <div class="gr">ADVANCED-FORMULA COOLANT</div>
+          </a>
+        </div>
+
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="products.html" class="link-arrow" style="color:#fff">View all EMTEX products <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POSITIONING SUMMARY ===== -->
+<section style="padding:clamp(64px,9vw,140px) 0;background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">Positioning</span>
+      <h2 class="reveal">Built for different buyers.<br/>Same Manak quality floor.</h2>
+      <p class="desc reveal">A quick comparison if you're choosing a brand to stock or sell.</p>
+    </div>
+
+    <div style="border:1px solid var(--line);background:#fff">
+      <div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:0;border-bottom:1px solid var(--line)" class="cmp-row">
+        <div style="padding:24px 28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500">/ Attribute</div>
+        <div style="padding:24px 28px;border-left:1px solid var(--line);font-weight:700;font-size:20px;letter-spacing:-0.015em">ZIGMA</div>
+        <div style="padding:24px 28px;border-left:1px solid var(--line);font-weight:700;font-size:20px;letter-spacing:-0.015em">EMTEX</div>
+      </div>
+      <div style="display:grid;grid-template-columns:200px 1fr 1fr;border-bottom:1px solid var(--line)" class="cmp-row">
+        <div style="padding:18px 28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500">/ Primary buyer</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">Auto distributors · workshops · fleet</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">Industrial distributors · OEM-aligned</div>
+      </div>
+      <div style="display:grid;grid-template-columns:200px 1fr 1fr;border-bottom:1px solid var(--line)" class="cmp-row">
+        <div style="padding:18px 28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500">/ Core categories</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">Engine oils · gear oils · ATF</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">Greases · hydraulics · cutting fluids</div>
+      </div>
+      <div style="display:grid;grid-template-columns:200px 1fr 1fr;border-bottom:1px solid var(--line)" class="cmp-row">
+        <div style="padding:18px 28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500">/ Pack sizes</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">500 ml — 50 L</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">18 kg pail — 200 L drum — bulk</div>
+      </div>
+      <div style="display:grid;grid-template-columns:200px 1fr 1fr" class="cmp-row">
+        <div style="padding:18px 28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500">/ Margin profile</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">High-velocity · standard margin</div>
+        <div style="padding:18px 28px;border-left:1px solid var(--line);font-size:15px">Specification sale · premium margin</div>
+      </div>
+    </div>
+  </div>
+  <style>@media(max-width:780px){.cmp-row{grid-template-columns:1fr !important}.cmp-row div{border-left:0 !important;border-top:1px solid var(--line)}.cmp-row div:first-child{border-top:0}}</style>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal" style="color:rgba(255,255,255,.65);display:block;margin-bottom:32px">04 / Stock our brands</span>
+    <h2 class="reveal-up">Carry ZIGMA or EMTEX<br/>in <em>your territory.</em></h2>
+    <p class="lede on-dark reveal" style="max-width:50ch;margin-top:24px">We're actively appointing distributors in select districts across India. Territory exclusivity is available for committed partners.</p>
+    <div class="cta-actions reveal" style="margin-top:48px">
+      <a href="distributors.html" class="btn btn-primary">Apply for distributorship <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+      <a href="contact.html" class="btn">Talk to sales</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="wrap">
+  <div class="foot-top">
+    <div><div class="brand-mark"><span class="logo-word"><span class="l1">MANAK PETROLEUM</span><span class="l2">EST. 1973</span></span></div><p class="brand-line">India's trusted manufacturer of lubricating greases and engine oils. ISO 9001:2015 &amp; ISO 17025:2017. Manufactured in India since 1973.</p></div>
+    <div><h4>Capabilities</h4><ul><li><a href="private-label.html">Private Label</a></li><li><a href="products.html">Products</a></li><li><a href="brands.html">In-House Brands</a></li><li><a href="distributors.html">Distributors</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="about.html">About / Heritage</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Get in touch</h4><ul><li><a href="tel:+919739095494">+91 97390 95494</a></li><li><a href="tel:+919739966560">+91 97399 66560</a></li><li><a href="mailto:manakgrease@gmail.com">manakgrease@gmail.com</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>© Manak Petroleum 1973 — 2026</span><span>Manufactured in India · Dispatched Pan-India</span><span>ISO 9001:2015 · ISO 17025:2017</span></div>
+</div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

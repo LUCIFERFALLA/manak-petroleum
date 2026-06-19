@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Private Label / Toll Blending · Manak Petroleum — Launch Your Lubricant Brand</title>
+<meta name="description" content="End-to-end private-label lubricant manufacturing — custom formulation, ISO-accredited testing, flexible MOQs, pan-India dispatch under your brand." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/main.css" />
+<style>
+  .pl-process{padding:clamp(64px,9vw,140px) 0;background:var(--ink);color:#fff}
+  .pl-process h2{color:#fff}
+  .pl-process .num,.pl-process .section-head .num{color:#7A776F}
+  .pl-process .section-head .desc{color:#9C988E}
+  .pl-step{
+    display:grid;grid-template-columns:80px 320px 1fr 1fr;gap:48px;align-items:start;
+    padding:48px 0;border-bottom:1px solid var(--line-dark);
+  }
+  .pl-step .stepnum{font-weight:800;font-size:clamp(48px,5.4vw,80px);line-height:1;letter-spacing:-0.04em;color:var(--red)}
+  .pl-step .stepkey{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9C988E;margin-bottom:14px;font-weight:500}
+  .pl-step h3{font-size:32px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#fff}
+  .pl-step .body{color:#C8C5BC;font-size:15.5px;line-height:1.6;max-width:42ch}
+  .pl-step .meta{display:flex;flex-direction:column;gap:14px;padding-top:8px}
+  .pl-step .meta .item{display:flex;justify-content:space-between;font-size:13.5px;color:#9C988E;border-bottom:1px solid var(--line-dark);padding-bottom:10px}
+  .pl-step .meta .item b{color:#fff;font-weight:500}
+  @media (max-width:980px){
+    .pl-step{grid-template-columns:1fr;gap:20px}
+    .pl-step h3{font-size:26px}
+  }
+
+  .pl-caps{padding:clamp(64px,9vw,140px) 0}
+  .caps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .cap{background:var(--paper);padding:40px 32px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .35s}
+  .cap:hover{background:var(--paper-2)}
+  .cap .ic{width:44px;height:44px;border:1px solid var(--line);display:grid;place-items:center}
+  .cap .ic svg{width:20px;height:20px;stroke:var(--red);fill:none;stroke-width:1.4}
+  .cap h4{font-size:20px;font-weight:700;letter-spacing:-0.015em;line-height:1.2;margin-top:auto}
+  .cap p{font-size:14px;color:var(--mute);line-height:1.55}
+  @media (max-width:900px){.caps-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:580px){.caps-grid{grid-template-columns:1fr}}
+
+  .pl-moq{padding:clamp(64px,9vw,140px) 0;background:var(--paper-2)}
+  .moq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .moq{background:#fff;border:1px solid var(--line);padding:36px 28px;transition:border-color .35s,transform .35s}
+  .moq:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .moq.feat{background:var(--ink);color:#fff;border-color:var(--ink);position:relative}
+  .moq.feat::before{content:"RECOMMENDED";position:absolute;top:-1px;left:-1px;background:var(--red);color:#fff;padding:6px 14px;font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;font-weight:500}
+  .moq .nm{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:16px}
+  .moq.feat .nm{color:#9C988E}
+  .moq .vol{font-weight:800;font-size:48px;letter-spacing:-0.04em;line-height:1;margin-bottom:8px}
+  .moq .vol .u{font-size:.4em;font-weight:500;color:var(--red);margin-left:6px;letter-spacing:-0.01em}
+  .moq.feat .vol .u{color:var(--red)}
+  .moq .sub{color:var(--mute);font-size:14px;margin-bottom:28px}
+  .moq.feat .sub{color:#9C988E}
+  .moq ul{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:10px}
+  .moq.feat ul{border-color:var(--line-dark)}
+  .moq ul li{font-size:14px;display:flex;gap:10px;align-items:baseline}
+  .moq ul li::before{content:"";width:5px;height:5px;background:var(--red);flex-shrink:0;transform:translateY(-3px)}
+  @media (max-width:900px){.moq-grid{grid-template-columns:1fr}}
+
+  .pl-faq{padding:clamp(64px,9vw,140px) 0}
+  .faq-row{border-top:1px solid var(--line);padding:28px 0;display:grid;grid-template-columns:60px 1fr 1fr;gap:32px;cursor:pointer}
+  .faq-row:last-child{border-bottom:1px solid var(--line)}
+  .faq-row .n{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:var(--mute)}
+  .faq-row h4{font-size:21px;font-weight:600;letter-spacing:-0.015em;line-height:1.3}
+  .faq-row p{color:var(--mute);font-size:14.5px;line-height:1.6}
+  @media (max-width:780px){.faq-row{grid-template-columns:1fr;gap:8px}}
+
+  .pl-form{padding:clamp(64px,9vw,140px) 0;background:var(--ink);color:#fff}
+  .pl-form h2{color:#fff}
+  .pl-form .section-head .num{color:#7A776F}
+  .pl-form .section-head .desc{color:#9C988E}
+  .form-card{background:#fff;color:var(--ink);padding:48px;border:1px solid var(--line);max-width:760px}
+  .form-card .submit-row{display:flex;justify-content:space-between;align-items:center;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+  .form-card .submit-row p{font-size:12px;color:var(--mute);max-width:32ch;font-family:var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+  @media (max-width:780px){.form-card{padding:28px}}
+</style>
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark">M<span class="bar"></span></div><div class="loader-meta"><span>MANAK PETROLEUM · EST 1973</span><span>PRIVATE LABEL</span></div></div>
+
+<header class="nav"><div class="nav-inner">
+  <a href="index.html" class="logo" aria-label="Manak Petroleum"><img class="logo-img" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto,e_trim,h_160/v1781785249/ChatGPT_Image_Jun_18_2026_05_50_15_PM_swybhi.png" alt="Manak Petroleum" /></a>
+  <span class="nav-iso"><span class="d"></span>ISO 9001:2015 Certified</span>
+  <nav class="nav-links" aria-label="Primary">
+    <div class="nav-item" data-nav="index.html"><a href="index.html">Home</a></div>
+
+    <div class="nav-item" data-nav="about.html"><a href="about.html">About <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown">
+        <div class="cat">Our Story</div>
+        <a class="ddl" href="about.html">Our Heritage</a>
+        <a class="ddl" href="about.html#timeline">Company Timeline</a>
+        <a class="ddl" href="about.html#facility">Our Facility</a>
+        <a class="ddl" href="about.html#principles">Operating Principles</a>
+        <div class="cat">Connect</div>
+        <a class="ddl" href="contact.html">Contact Us</a>
+        <a class="ddl ddl-red" href="private-label.html#form">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="products.html"><a href="products.html">Products <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown mega">
+        <div>
+          <div class="cat">By Category</div>
+          <a class="ddl" href="products.html#engine">Engine Oils</a>
+          <a class="ddl" href="products.html#gear">Gear &amp; Transmission</a>
+          <a class="ddl" href="products.html#industrial">Hydraulic &amp; Industrial</a>
+          <a class="ddl" href="products.html#grease">Greases</a>
+          <a class="ddl" href="products.html#specialty">Specialty &amp; Coolant</a>
+        </div>
+        <div>
+          <div class="cat">By Brand</div>
+          <a class="ddl" href="brands.html#zigma">ZIGMA Range<span class="sub">Automotive &amp; Industrial</span></a>
+          <a class="ddl" href="brands.html#emtex">EMTEX Range<span class="sub">Premium Heavy-Duty Industrial</span></a>
+          <a class="ddl ddl-red" href="products.html">View All Products &rarr;</a>
+        </div>
+        <a class="dd-feature" href="product.html">
+          <div class="ph"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/q_auto/f_auto/v1781774609/Screenshot_2026-06-18_144502_jzvupc.png" alt="ZIGMA CH-4 15W-40"/></div>
+          <div class="ft"><div class="lab">Featured · Engine Oil</div><h5>CH-4 15W-40</h5><div class="s">API CH-4 · Heavy diesel · 10 L</div><span style="color:var(--red);font-size:13px;font-weight:600">View spec sheet &rarr;</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="private-label.html"><a href="private-label.html">Private Label <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown" style="min-width:262px">
+        <div class="cat">How it works</div>
+        <a class="ddl" href="private-label.html">Overview</a>
+        <a class="ddl" href="private-label.html#process">The 4-Step Process</a>
+        <a class="ddl" href="private-label.html#capabilities">Our Capabilities</a>
+        <a class="ddl" href="private-label.html#moq">MOQ &amp; Engagement Tiers</a>
+        <a class="ddl" href="private-label.html#faq">FAQ</a>
+        <div class="cat">Get started</div>
+        <a class="dd-btn" href="private-label.html#form">Start a Project</a>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="brands.html"><a href="brands.html">Brands <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown cols2">
+        <div>
+          <div class="cat">ZIGMA</div>
+          <a class="ddl" href="brands.html#zigma">Brand Overview</a>
+          <a class="ddl" href="products.html#zigma-engine">Engine Oils</a>
+          <a class="ddl" href="products.html#zigma-gear">Gear Oils</a>
+          <a class="ddl" href="products.html#zigma-grease">Greases</a>
+          <a class="ddl ddl-red" href="brands.html#zigma">View all ZIGMA &rarr;</a>
+        </div>
+        <div>
+          <div class="cat">EMTEX</div>
+          <a class="ddl" href="brands.html#emtex">Brand Overview</a>
+          <a class="ddl" href="products.html#emtex-engine">Engine Oils</a>
+          <a class="ddl" href="products.html#emtex-gear">Gear Oils</a>
+          <a class="ddl" href="products.html#emtex-specialty">Coolants</a>
+          <a class="ddl ddl-red" href="brands.html#emtex">View all EMTEX &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="industries.html"><a href="industries.html">Industries <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown cols2 dd-right">
+        <div>
+          <div class="cat">Industries</div>
+          <a class="ddl" href="industries.html#automotive">Automotive &amp; CV</a>
+          <a class="ddl" href="industries.html#steel">Steel &amp; Mining</a>
+          <a class="ddl" href="industries.html#construction">Construction</a>
+          <a class="ddl" href="industries.html#agriculture">Agriculture</a>
+        </div>
+        <div>
+          <div class="cat">&nbsp;</div>
+          <a class="ddl" href="industries.html#manufacturing">Manufacturing</a>
+          <a class="ddl" href="industries.html#marine">Marine</a>
+          <a class="ddl" href="industries.html">Logistics &amp; Fleet</a>
+          <div class="dd-divider"></div>
+          <a class="ddl ddl-red" href="industries.html">All Industries &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-nav="distributors.html"><a href="distributors.html">Distributors <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></a>
+      <div class="dropdown dd-right" style="min-width:248px">
+        <div class="cat">Partnership</div>
+        <a class="ddl" href="distributors.html#why">Why Partner with Manak</a>
+        <a class="ddl" href="distributors.html#territories">Territory Openings</a>
+        <a class="ddl" href="distributors.html#requirements">Partner Requirements</a>
+        <a class="dd-btn" href="distributors.html#apply">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+  <a href="contact.html" class="nav-cta">Request a Quote <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</div></header>
+
+
+<aside class="drawer" aria-hidden="true">
+  <nav class="drawer-acc" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <details>
+      <summary>About <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">Our Story</span>
+        <a href="about.html">Our Heritage</a>
+        <a href="about.html#timeline">Company Timeline</a>
+        <a href="about.html#facility">Our Facility</a>
+        <a href="about.html#principles">Operating Principles</a>
+        <span class="cat">Connect</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </details>
+    <details>
+      <summary>Products <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">By Category</span>
+        <a href="products.html#engine">Engine Oils</a>
+        <a href="products.html#gear">Gear &amp; Transmission</a>
+        <a href="products.html#industrial">Hydraulic &amp; Industrial</a>
+        <a href="products.html#grease">Greases</a>
+        <a href="products.html#specialty">Specialty &amp; Coolant</a>
+        <span class="cat">By Brand</span>
+        <a href="brands.html#zigma">ZIGMA Range</a>
+        <a href="brands.html#emtex">EMTEX Range</a>
+        <a href="products.html">View All Products</a>
+      </div>
+    </details>
+    <details>
+      <summary>Private Label <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="private-label.html">Overview</a>
+        <a href="private-label.html#process">The 4-Step Process</a>
+        <a href="private-label.html#capabilities">Our Capabilities</a>
+        <a href="private-label.html#moq">MOQ &amp; Engagement Tiers</a>
+        <a href="private-label.html#faq">FAQ</a>
+        <a href="private-label.html#form">Start a Project</a>
+      </div>
+    </details>
+    <details>
+      <summary>Brands <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <span class="cat">ZIGMA</span>
+        <a href="brands.html#zigma">Brand Overview</a>
+        <span class="cat">EMTEX</span>
+        <a href="brands.html#emtex">Brand Overview</a>
+        <a href="products.html">View All Products</a>
+      </div>
+    </details>
+    <details>
+      <summary>Industries <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="industries.html#automotive">Automotive &amp; CV</a>
+        <a href="industries.html#steel">Steel &amp; Mining</a>
+        <a href="industries.html#construction">Construction</a>
+        <a href="industries.html#agriculture">Agriculture</a>
+        <a href="industries.html#manufacturing">Manufacturing</a>
+        <a href="industries.html#marine">Marine</a>
+        <a href="industries.html">All Industries</a>
+      </div>
+    </details>
+    <details>
+      <summary>Distributors <span class="pm">+</span></summary>
+      <div class="sub-links">
+        <a href="distributors.html#why">Why Partner with Manak</a>
+        <a href="distributors.html#territories">Territory Openings</a>
+        <a href="distributors.html#requirements">Partner Requirements</a>
+        <a href="distributors.html#apply">Apply Now</a>
+      </div>
+    </details>
+  </nav>
+  <div class="drawer-foot">
+    <span>Get in touch</span>
+    <a href="tel:+919739095494">+91 97390 95494</a>
+    <a href="mailto:manakgrease@gmail.com">manakgrease@gmail.com</a>
+  </div>
+  <div class="drawer-cta"><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
+</aside>
+
+
+<section class="page-head ph-dark">
+  <div class="ph-hero-bg"><img loading="eager" src="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto,so_0/v1781793829/0618_2_1_n04ghv.jpg" alt=""/></div>
+  <div class="wrap">
+    <div class="crumbs reveal"><a href="index.html">Home</a> / <span>Private Label</span></div>
+    <h1 class="reveal-up">Your brand,<br/>our <em>50-year-old</em><br/>manufacturing floor.</h1>
+    <div class="page-head-grid">
+      <p class="reveal">End-to-end private-label lubricant manufacturing — from custom formulation through ISO-accredited testing, flexible production runs, labelling, and pan-India dispatch. You bring the brand. We bring the chemistry, the capacity, and the documentation.</p>
+      <div class="reveal" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
+        <a href="#form" class="btn btn-primary">Start a project <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        <a href="#process" class="btn">See the process</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMULATION VIDEO BAND ===== -->
+<section style="padding:0 0 clamp(48px,7vw,90px)">
+  <div class="wrap">
+    <div class="reveal-up" style="position:relative;aspect-ratio:16/7;overflow:hidden;border:1px solid var(--line)">
+      <div class="media scrim" style="position:absolute">
+        <video autoplay muted loop playsinline preload="none"
+          poster="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto,so_0/v1781793829/0618_2_1_n04ghv.jpg">
+          <source src="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto/v1781793829/0618_2_1_n04ghv.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div style="position:absolute;left:0;bottom:0;z-index:3;padding:clamp(24px,4vw,48px);color:#fff;max-width:34ch">
+        <div class="eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:14px">/ ISO 17025 accredited laboratory</div>
+        <div style="font-size:clamp(22px,2.6vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15">Your formulation, developed and verified before a single drum is filled.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS (DARK) ===== -->
+<section class="pl-process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">The 4-step process</span>
+      <h2 class="reveal">From first conversation<br/>to first dispatch.</h2>
+      <p class="desc reveal">A single point of contact takes your project from spec to scale. Most first batches dispatch within 4–6 weeks of agreed formulation.</p>
+    </div>
+
+    <div class="pl-step reveal-up">
+      <div class="stepnum">01</div>
+      <div>
+        <div class="stepkey">Consult &amp; Specify</div>
+        <h3>Define the application.<br/>Specify the chemistry.</h3>
+      </div>
+      <p class="body">Our chemists work with your engineering team to define the right base stock, additive package, and performance specification for your end use. We start from operating conditions — temperature, load, contact pressure, water exposure — not from a catalogue.</p>
+      <div class="meta">
+        <div class="item"><span>Duration</span><b>3–7 days</b></div>
+        <div class="item"><span>Outputs</span><b>Written spec sheet</b></div>
+        <div class="item"><span>NDA</span><b>Standard offering</b></div>
+      </div>
+    </div>
+
+    <div class="pl-step reveal-up">
+      <div class="stepnum">02</div>
+      <div>
+        <div class="stepkey">Formulate &amp; Test</div>
+        <h3>Lab batch.<br/>Independent verification.</h3>
+      </div>
+      <p class="body">Trial batches are formulated in our ISO 17025:2017-accredited laboratory and validated against IS, API and NLGI benchmarks. You receive a complete certificate of analysis before any commercial run is greenlit.</p>
+      <div class="meta">
+        <div class="item"><span>Duration</span><b>5–10 days</b></div>
+        <div class="item"><span>Outputs</span><b>COA + sample</b></div>
+        <div class="item"><span>Accreditation</span><b>ISO 17025</b></div>
+      </div>
+    </div>
+
+    <div class="pl-step reveal-up">
+      <div class="stepnum">03</div>
+      <div>
+        <div class="stepkey">Manufacture</div>
+        <h3>Scale to your<br/>commercial volume.</h3>
+      </div>
+      <p class="body">Production runs at flexible quantities at our Harohalli facility — backed by 22,000 MT + KL of annual capacity. Each batch is QC-signed before filling.</p>
+      <div class="meta">
+        <div class="item"><span>Min order</span><b>500 kg / 1,000 L</b></div>
+        <div class="item"><span>Lead time</span><b>2–3 weeks</b></div>
+        <div class="item"><span>Plants</span><b>Harohalli, Bengaluru</b></div>
+      </div>
+    </div>
+
+    <div class="pl-step reveal-up">
+      <div class="stepnum">04</div>
+      <div>
+        <div class="stepkey">Label &amp; Dispatch</div>
+        <h3>Your brand.<br/>Our logistics.</h3>
+      </div>
+      <p class="body">Filled, labelled, palletised, and dispatched pan-India. Every shipment includes batch documentation, Certificate of Analysis, and Material Safety Data Sheets — ready for your distributor or end-customer onboarding.</p>
+      <div class="meta">
+        <div class="item"><span>Pack sizes</span><b>500 ml — 200 L</b></div>
+        <div class="item"><span>Coverage</span><b>Pan-India</b></div>
+        <div class="item"><span>Documents</span><b>COA + MSDS + Batch</b></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PROCESS VIDEO BAND (below 4-step) ===== -->
+<section style="padding:0;background:var(--ink)">
+  <div class="wrap" style="padding-top:clamp(48px,6vw,72px);padding-bottom:clamp(64px,9vw,120px)">
+    <div class="reveal-up" style="position:relative;aspect-ratio:16/7;overflow:hidden;border:1px solid var(--line-dark)">
+      <div class="media scrim" style="position:absolute">
+        <video muted loop playsinline preload="none"
+          poster="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto,so_0/v1781793930/0618_2_bjbrve.jpg">
+          <source src="https://res.cloudinary.com/dij7gyend/video/upload/q_auto/f_auto/v1781793930/0618_2_bjbrve.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div style="position:absolute;left:0;bottom:0;z-index:3;padding:clamp(24px,4vw,48px);color:#fff;max-width:36ch">
+        <div class="eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:14px">From floor to dispatch</div>
+        <div style="font-family:var(--f-display);font-size:clamp(24px,2.8vw,38px);font-weight:700;letter-spacing:-0.01em;line-height:1.1">Your batch, manufactured, filled, and labelled under one roof at Harohalli.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAPABILITIES ===== -->
+<section class="pl-caps" id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">Capabilities</span>
+      <h2 class="reveal">Everything you need<br/>under one roof.</h2>
+      <p class="desc reveal">Formulation chemists, accredited labs, dual-plant production, in-house filling, on-site quality, and a single accountable project lead — all of it part of the offer.</p>
+    </div>
+    <div class="caps-grid">
+      <div class="cap reveal-up"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3v6L4 14l5 5h6l5-5-5-5V3"/></svg></div><div><h4>Custom formulation</h4><p>Bespoke additive packages developed for your application's duty cycle, climate, and OEM constraints.</p></div></div>
+      <div class="cap reveal-up"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M9 3v18"/></svg></div><div><h4>Multi-grade lineup</h4><p>Greases, engine oils, gear oils, hydraulics, coolants — manufacture your entire SKU range in one place.</p></div></div>
+      <div class="cap reveal-up"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18"/></svg></div><div><h4>Global base oil sourcing</h4><p>BPCL, Middle Eastern refineries, USA, Canada, Germany — multi-source supply protects against shocks.</p></div></div>
+      <div class="cap reveal-up"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><div><h4>ISO 17025 accredited lab</h4><p>Independent test results on every formulation — viscosity, drop point, EP, water washout, oxidation.</p></div></div>
+      <div class="cap reveal-up"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 10h18"/></svg></div><div><h4>Label &amp; pack design</h4><p>Pack-format flexibility (500 ml pouches through 200 L drums) and on-site labelling to your artwork.</p></div></div>
+      <div class="cap reveal-up"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h14l4 4v6h-4M3 7v10h4"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div><div><h4>Pan-India dispatch</h4><p>Pan-India dispatch from our Harohalli facility to anywhere in India. Tanker, palletised, or breakbulk.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOQ / TIERS ===== -->
+<section class="pl-moq" id="moq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">Minimum order quantities</span>
+      <h2 class="reveal">Pilot, scale,<br/>or contract supply.</h2>
+      <p class="desc reveal">Three engagement tiers — built for brands at different stages of growth. No pricing on this page; we'll quote against your exact spec.</p>
+    </div>
+
+    <div class="moq-grid">
+      <div class="moq reveal-up">
+        <div class="nm">/ Tier 01 · Pilot</div>
+        <div class="vol">500 <span class="u">KG / L</span></div>
+        <div class="sub">First commercial batch · for brand validation</div>
+        <ul>
+          <li>Custom formulation included</li>
+          <li>ISO 17025 test report</li>
+          <li>3–4 SKU options</li>
+          <li>Standard pack sizes</li>
+        </ul>
+      </div>
+      <div class="moq feat reveal-up">
+        <div class="nm">/ Tier 02 · Scale</div>
+        <div class="vol">5,000 <span class="u">KG / L</span></div>
+        <div class="sub">Active distributor or regional brand</div>
+        <ul>
+          <li>All Tier 01 inclusions</li>
+          <li>Priority production scheduling</li>
+          <li>10+ SKU lineup</li>
+          <li>Custom pack design</li>
+          <li>Dedicated account lead</li>
+        </ul>
+      </div>
+      <div class="moq reveal-up">
+        <div class="nm">/ Tier 03 · Contract</div>
+        <div class="vol">50,000+ <span class="u">KG / L</span></div>
+        <div class="sub">12-month rolling supply agreement</div>
+        <ul>
+          <li>All Tier 02 inclusions</li>
+          <li>Locked rate cards</li>
+          <li>Reserved production slots</li>
+          <li>Plant-floor visits</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="pl-faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">FAQ</span>
+      <h2 class="reveal">Questions we<br/>get every week.</h2>
+      <p class="desc reveal">Short answers. Full details on a call.</p>
+    </div>
+
+    <div>
+      <div class="faq-row reveal"><span class="n">/ 01</span><h4>What's the smallest run you'll accept?</h4><p>Our pilot tier starts at 500 kg / 500 L. Below that we can run lab-scale samples for evaluation, but commercial supply begins at 500.</p></div>
+      <div class="faq-row reveal"><span class="n">/ 02</span><h4>Will you blend to my exact spec?</h4><p>Yes. We work from your operating envelope (temperature, load, water, contact pressure) and develop the additive package in-house. Final formulation is signed off by you before commercial run.</p></div>
+      <div class="faq-row reveal"><span class="n">/ 03</span><h4>How is intellectual property handled?</h4><p>Standard NDAs apply to every project. Formulation files belong to you. We do not cross-blend or share specifications with other clients — full segregation in our quality records.</p></div>
+      <div class="faq-row reveal"><span class="n">/ 04</span><h4>Can you label and pack to my artwork?</h4><p>Yes. Pack formats from 500 ml through 200 L drums and bulk tanker. We coordinate label printing or accept your supplied labels — your call.</p></div>
+      <div class="faq-row reveal"><span class="n">/ 05</span><h4>Do you serve customers outside India?</h4><p>Our primary footprint is India, but we have shipped to South Asia, the Middle East, and East Africa under buyer-arranged logistics. Talk to us about your route.</p></div>
+      <div class="faq-row reveal"><span class="n">/ 06</span><h4>What certifications do you ship under?</h4><p>ISO 9001:2015 for manufacturing, ISO 17025:2017 for the R&amp;D lab. Finished products are formulated to IS, API and NLGI specifications, with CoA on every batch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORM ===== -->
+<section class="pl-form" id="form">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num reveal">Start a project</span>
+      <h2 class="reveal">Tell us about<br/>your product.</h2>
+      <p class="desc reveal">Submit the form and a member of our private-label team will reach out within one business day. Or call us directly: +91 97390 95494.</p>
+    </div>
+
+    <div class="form-card reveal-up">
+      <form class="form" onsubmit="event.preventDefault();alert('Thank you — we will be in touch within 24 hours.');">
+        <div class="form-row">
+          <div class="field"><label>/ Your name</label><input type="text" placeholder="Full name" required/></div>
+          <div class="field"><label>/ Company</label><input type="text" placeholder="Brand or company name" required/></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>/ Email</label><input type="email" placeholder="you@company.com" required/></div>
+          <div class="field"><label>/ Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX" required/></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>/ Product category</label>
+            <select>
+              <option>Select a category</option>
+              <option>Greases (calcium / lithium / EP)</option>
+              <option>Engine oils (automotive)</option>
+              <option>Gear &amp; transmission oils</option>
+              <option>Industrial / hydraulics</option>
+              <option>Coolants / DEF</option>
+              <option>Multiple categories</option>
+            </select>
+          </div>
+          <div class="field"><label>/ Estimated annual volume</label>
+            <select>
+              <option>Select volume range</option>
+              <option>Under 1,000 kg / L</option>
+              <option>1,000 – 5,000 kg / L</option>
+              <option>5,000 – 50,000 kg / L</option>
+              <option>50,000+ kg / L</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>/ Tell us about your application</label><textarea placeholder="Operating conditions, target market, OEM requirements, existing spec if any…"></textarea></div>
+        <div class="submit-row">
+          <p>By submitting, you agree to be contacted by our team. We do not share your data.</p>
+          <button type="submit" class="btn btn-primary">Submit enquiry <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><div class="wrap">
+  <div class="foot-top">
+    <div><div class="brand-mark"><span class="logo-word"><span class="l1">MANAK PETROLEUM</span><span class="l2">EST. 1973</span></span></div><p class="brand-line">India's trusted manufacturer of lubricating greases and engine oils. ISO 9001:2015 &amp; ISO 17025:2017. Manufactured in India since 1973.</p></div>
+    <div><h4>Capabilities</h4><ul><li><a href="private-label.html">Private Label</a></li><li><a href="products.html">Products</a></li><li><a href="brands.html">In-House Brands</a></li><li><a href="distributors.html">Distributors</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="about.html">About / Heritage</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Get in touch</h4><ul><li><a href="tel:+919739095494">+91 97390 95494</a></li><li><a href="tel:+919739966560">+91 97399 66560</a></li><li><a href="mailto:manakgrease@gmail.com">manakgrease@gmail.com</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>© Manak Petroleum 1973 — 2026</span><span>Manufactured in India · Dispatched Pan-India</span><span>ISO 9001:2015 · ISO 17025:2017</span></div>
+</div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
