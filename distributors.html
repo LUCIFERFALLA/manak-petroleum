@@ -403,20 +403,25 @@
     </div>
 
     <div class="apply-card reveal-up">
-      <form class="form" onsubmit="event.preventDefault();alert('Thank you — our channel team will reach out within 24 hours.');">
+      <form class="form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New distributor application — Manak Petroleum" />
+        <input type="hidden" name="from_name" value="Manak Petroleum — Distributors" />
+        <input type="hidden" name="redirect" value="https://manakpetroleum.com/thank-you.html" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="form-row">
-          <div class="field"><label>/ Your name</label><input type="text" placeholder="Full name" required/></div>
-          <div class="field"><label>/ Business name</label><input type="text" placeholder="Firm / Company" required/></div>
+          <div class="field"><label>/ Your name</label><input type="text" name="name" placeholder="Full name" required/></div>
+          <div class="field"><label>/ Business name</label><input type="text" name="business_name" placeholder="Firm / Company" required/></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>/ Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX" required/></div>
-          <div class="field"><label>/ Email</label><input type="email" placeholder="you@business.com" required/></div>
+          <div class="field"><label>/ Phone</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+          <div class="field"><label>/ Email</label><input type="email" name="email" placeholder="you@business.com" required/></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>/ Territory of interest</label><input type="text" placeholder="District / State"/></div>
+          <div class="field"><label>/ Territory of interest</label><input type="text" name="territory" placeholder="District / State"/></div>
           <div class="field"><label>/ Brand interest</label>
-            <select>
-              <option>Select brand</option>
+            <select name="brand_interest">
+              <option value="">Select brand</option>
               <option>ZIGMA (Automotive)</option>
               <option>EMTEX (Industrial)</option>
               <option>Both ZIGMA + EMTEX</option>
@@ -425,20 +430,23 @@
         </div>
         <div class="form-row">
           <div class="field"><label>/ Years in trade</label>
-            <select>
-              <option>Select range</option>
+            <select name="years_in_trade">
+              <option value="">Select range</option>
               <option>0–2 years</option>
               <option>3–5 years</option>
               <option>6–10 years</option>
               <option>10+ years</option>
             </select>
           </div>
-          <div class="field"><label>/ Existing categories</label><input type="text" placeholder="e.g. lubricants, batteries, tyres…"/></div>
+          <div class="field"><label>/ Existing categories</label><input type="text" name="existing_categories" placeholder="e.g. lubricants, batteries, tyres…"/></div>
         </div>
-        <div class="field"><label>/ Anything else we should know?</label><textarea placeholder="Existing customer base, target segments, why Manak…"></textarea></div>
+        <div class="field"><label>/ Anything else we should know?</label><textarea name="message" placeholder="Existing customer base, target segments, why Manak…"></textarea></div>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap;gap:16px">
           <p style="font-size:12px;color:var(--mute);max-width:32ch;font-family:var(--f-mono);letter-spacing:.06em;text-transform:uppercase">By submitting, you agree to be contacted by our channel team.</p>
-          <button type="submit" class="btn btn-primary">Submit application <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></button>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button type="button" class="btn btn-wa js-wa-form" data-wa-msg="Hi Manak Petroleum, I'd like to apply as a distributor:">WhatsApp us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.5.57.19 1.1.16 1.51.1.46-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></button>
+            <button type="submit" class="btn btn-primary">Submit application <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg></button>
+          </div>
         </div>
       </form>
     </div>
@@ -455,6 +463,7 @@
   <div class="foot-bottom"><span>© Manak Petroleum 1973 — 2026</span><span>Manufactured in India · Dispatched Pan-India</span><span>ISO 9001:2015 · ISO 17025:2017</span></div>
 </div></footer>
 
+<a class="wa-fab" href="https://wa.me/919739095494?text=Hi%20Manak%20Petroleum%2C%20I%27d%20like%20to%20enquire%20about%20your%20greases%20and%20lubricants." target="_blank" rel="noopener" aria-label="Order or enquire on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.5.57.19 1.1.16 1.51.1.46-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></a>
 <script src="js/main.js"></script>
 </body>
 </html>

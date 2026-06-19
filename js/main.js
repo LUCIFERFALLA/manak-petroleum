@@ -207,6 +207,26 @@
     window.addEventListener('hashchange', applyHash);
   }
 
+  /* ---------- WHATSAPP: compose form fields into a chat message ---------- */
+  const WA_NUMBER = '919739095494';
+  const WA_SKIP = ['access_key','subject','from_name','redirect','botcheck'];
+  document.querySelectorAll('.js-wa-form').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const form = btn.closest('form');
+      const lines = [btn.dataset.waMsg || 'Hi Manak Petroleum, I have an enquiry:', ''];
+      if(form){
+        form.querySelectorAll('input[name],select[name],textarea[name]').forEach(el => {
+          if(WA_SKIP.includes(el.name) || el.type === 'checkbox') return;
+          const val = (el.value || '').trim();
+          if(!val) return;
+          const label = el.name.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+          lines.push(label + ': ' + val);
+        });
+      }
+      window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    });
+  });
+
   /* ---------- ACTIVE NAV HIGHLIGHT ---------- */
   const here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   document.querySelectorAll('.nav-item[data-nav]').forEach(item => {
