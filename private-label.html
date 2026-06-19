@@ -25,9 +25,16 @@
   .pl-step .meta{display:flex;flex-direction:column;gap:14px;padding-top:8px}
   .pl-step .meta .item{display:flex;justify-content:space-between;font-size:13.5px;color:#9C988E;border-bottom:1px solid var(--line-dark);padding-bottom:10px}
   .pl-step .meta .item b{color:#fff;font-weight:500}
+  /* vertical connector line linking the 4 step numbers */
+  .pl-steps{position:relative}
+  .pl-steps::before{content:"";position:absolute;left:39px;top:72px;bottom:72px;width:2px;
+    background:repeating-linear-gradient(180deg,rgba(200,16,46,.55) 0 5px,transparent 5px 13px);z-index:0}
+  .pl-step{position:relative;z-index:1}
+  .pl-step .stepnum{background:var(--ink)}
   @media (max-width:980px){
     .pl-step{grid-template-columns:1fr;gap:20px}
     .pl-step h3{font-size:26px}
+    .pl-steps::before{display:none}
   }
 
   .pl-caps{padding:clamp(64px,9vw,140px) 0}
@@ -317,6 +324,7 @@
       <p class="desc reveal">A single point of contact takes your project from spec to scale. Most first batches dispatch within 4–6 weeks of agreed formulation.</p>
     </div>
 
+    <div class="pl-steps">
     <div class="pl-step reveal-up">
       <div class="stepnum">01</div>
       <div>
@@ -371,6 +379,7 @@
         <div class="item"><span>Coverage</span><b>Pan-India</b></div>
         <div class="item"><span>Documents</span><b>COA + MSDS + Batch</b></div>
       </div>
+    </div>
     </div>
 
   </div>

@@ -1373,6 +1373,8 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 
 /* certifications: single row on desktop (no NLGI orphan) */
 @media (min-width:901px){.certs .certs-items{flex-wrap:nowrap}}
+/* tablet: cap row width so 5 chips wrap a balanced 3+2, never 4+1 */
+@media (max-width:900px){.certs .certs-items{max-width:660px;margin:0 auto}}
 
 /* ============================================================
    HERO v4 — 2-column (text left / stats right), no overlap
