@@ -1429,23 +1429,11 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
    WHATSAPP — floating chat button + in-form button
    ============================================================ */
 .wa-fab{
-  position:fixed;right:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);z-index:120;
-  width:58px;height:58px;border-radius:50%;background:#25D366;
-  display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.22);
+  position:fixed;right:clamp(14px,2.5vw,22px);bottom:clamp(14px,2.5vw,22px);z-index:120;
+  width:48px;height:48px;border-radius:50%;background:#25D366;
+  display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.20);
   transition:transform .4s var(--ease-lux),box-shadow .4s var(--ease-lux);
 }
-.wa-fab svg{width:30px;height:30px;fill:#fff}
-.wa-fab:hover{transform:scale(1.08) translateY(-2px);box-shadow:0 16px 40px rgba(37,211,102,.4)}
-.wa-fab::after{
-  content:"Order on WhatsApp";position:absolute;right:70px;top:50%;transform:translateY(-50%) translateX(8px);
-  background:var(--ink);color:#fff;font-size:12px;font-weight:600;white-space:nowrap;
-  padding:8px 12px;border-radius:6px;opacity:0;pointer-events:none;
-  transition:opacity .4s var(--ease-lux),transform .4s var(--ease-lux);
-}
-.wa-fab:hover::after{opacity:1;transform:translateY(-50%) translateX(0)}
-@media (max-width:560px){.wa-fab::after{display:none}}
-
-.btn-wa{background:#25D366;border-color:#25D366;color:#fff}
-.btn-wa:hover{background:#1ebe5a;border-color:#1ebe5a;color:#fff}
-.btn-wa svg{fill:#fff;stroke:none}
+.wa-fab svg{width:24px;height:24px;fill:#fff}
+.wa-fab:hover{transform:scale(1.08);box-shadow:0 10px 26px rgba(37,211,102,.38)}
 @media print{.wa-fab{display:none}}
