@@ -1393,8 +1393,8 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 /* heavier scrim on the left so the headline always reads over the video branding */
 .hero-bg::after{
   background:
-    linear-gradient(90deg,rgba(8,9,11,.78) 0%,rgba(8,9,11,.45) 42%,rgba(8,9,11,.25) 100%),
-    linear-gradient(180deg,rgba(8,9,11,.35) 0%,rgba(8,9,11,.12) 40%,rgba(8,9,11,.85) 100%);
+    linear-gradient(90deg,rgba(8,9,11,.88) 0%,rgba(8,9,11,.58) 45%,rgba(8,9,11,.34) 100%),
+    linear-gradient(180deg,rgba(8,9,11,.46) 0%,rgba(8,9,11,.2) 38%,rgba(8,9,11,.9) 100%);
 }
 @media (max-width:980px){
   .hero-content{flex-direction:column;align-items:flex-start}
@@ -1407,16 +1407,26 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 /* logo gentle entrance */
 @keyframes logoIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .logo-img{animation:logoIn .6s var(--ease-out) both}
-/* hero headline word-by-word rise */
-.hero-title .w{display:inline-block;opacity:0;transform:translateY(120%);
-  animation:wordRise .7s var(--ease-out) forwards;animation-delay:calc(.25s + var(--wi,0)*.07s)}
-.hero-title{overflow:hidden}
+/* hero headline word-by-word rise — gentle few-pixel lift, not a fly-up */
+.hero-title .w{display:inline-block;opacity:0;transform:translateY(0.18em);
+  animation:wordRise .6s var(--ease-lux) forwards;animation-delay:calc(.12s + var(--wi,0)*.045s)}
 @keyframes wordRise{to{opacity:1;transform:none}}
 /* soft float on hero stats block */
 .hero-stats .hstat .v{will-change:transform}
 @media (prefers-reduced-motion:reduce){
   .logo-img,.hero-title .w{animation:none;opacity:1;transform:none}
 }
+
+/* ============================================================
+   ACCESSIBILITY — visible keyboard focus + keyboard-openable menus
+   ============================================================ */
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+.btn:focus-visible,.nav-cta:focus-visible,.wa-fab:focus-visible{outline-offset:4px}
+/* open mega-menus on keyboard focus, not just hover */
+.nav-item:focus-within > a .caret{transform:rotate(180deg)}
+.nav-item:focus-within > a::after{transform:scaleX(1)}
+.nav-item:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a.ddl:focus-visible{background:#F5F5F5;color:var(--red)}
 
 /* ============================================================
    WHATSAPP — floating chat button + in-form button
