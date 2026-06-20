@@ -5,3 +5,8 @@ desktop.ini
 # scratch
 media_tmp/
 *.log
+# agent tooling (local only — must NOT deploy to the web host)
+.agents/
+.claude/
+skills-lock.json
+node_modules/
