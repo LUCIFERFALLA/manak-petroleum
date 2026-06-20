@@ -31,12 +31,17 @@ create table if not exists public.enquiries (
 -- public key — you view submissions in the dashboard / with the service role.
 alter table public.enquiries enable row level security;
 
+-- allow ANY role (anon, authenticated, and the new sb_publishable_ key role)
+-- to insert; "to public" is the most permissive target and avoids role-name mismatches.
 drop policy if exists "public can submit enquiries" on public.enquiries;
 create policy "public can submit enquiries"
   on public.enquiries
   for insert
-  to anon, authenticated
+  to public
   with check (true);
+
+-- table-level privilege (RLS still governs the rows)
+grant insert on table public.enquiries to anon, authenticated;
 
 -- (Optional) helpful index for sorting newest-first in the dashboard
 create index if not exists enquiries_created_at_idx
