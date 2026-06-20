@@ -1,0 +1,25 @@
+{
+  "name": "manak-petroluem",
+  "version": "1.0.0",
+  "description": "Static marketing website for **Manak Petroleum** (lubricating greases & engine oils, est. 1973), manufactured at Harohalli, Bengaluru. Brands: **ZIGMA** and **EMTEX**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LUCIFERFALLA/manak-petroleum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LUCIFERFALLA/manak-petroleum/issues"
+  },
+  "homepage": "https://github.com/LUCIFERFALLA/manak-petroleum#readme",
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2"
+  }
+}

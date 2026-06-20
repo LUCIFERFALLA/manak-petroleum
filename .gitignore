@@ -10,3 +10,6 @@ media_tmp/
 .claude/
 skills-lock.json
 node_modules/
+# secrets / local env (never deploy)
+.env
+.env.*
