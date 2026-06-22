@@ -217,15 +217,22 @@ em.accent{font-style:normal;color:var(--red);font-weight:inherit}
 /* ============ NAV ============ */
 .nav{
   position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.85);
-  backdrop-filter:saturate(180%) blur(16px);
-  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  background:rgba(255,255,255,.9);
   border-bottom:1px solid transparent;
-  transition:border-color .35s, background .35s, padding .35s;
+  transition:border-color .35s, background .35s, padding .35s, box-shadow .35s;
+  will-change:background;
 }
 .nav.is-scrolled{
   border-color:var(--line);
-  background:rgba(255,255,255,.92);
+  background:rgba(255,255,255,.96);
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+/* light frosted glass only on capable desktops — never on mobile (it janks scroll) */
+@media (min-width:1024px){
+  @supports (backdrop-filter:blur(1px)){
+    .nav{background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px)}
+    .nav.is-scrolled{background:rgba(255,255,255,.82)}
+  }
 }
 .nav-inner{
   display:flex;align-items:center;justify-content:space-between;

@@ -150,8 +150,9 @@
   if(videos.length){
     const prep = (v) => {
       v.muted = true; v.defaultMuted = true;
-      v.setAttribute('muted',''); v.setAttribute('autoplay','');
-      v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
+      v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
+      /* do NOT force the autoplay attribute — that makes every video download
+         on page load. The observer below plays only videos actually in view. */
     };
     const tryPlay = (v) => { v.muted = true; const p = v.play(); if(p && p.catch) p.catch(()=>{}); };
     videos.forEach(prep);
