@@ -148,22 +148,32 @@
      of the sluggish feel. Only the video(s) currently in view actually play. */
   const videos = document.querySelectorAll('video');
   if(videos.length){
-    videos.forEach(v => { v.muted = true; v.setAttribute('playsinline',''); });
+    const prep = (v) => {
+      v.muted = true; v.defaultMuted = true;
+      v.setAttribute('muted',''); v.setAttribute('autoplay','');
+      v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
+    };
+    const tryPlay = (v) => { v.muted = true; const p = v.play(); if(p && p.catch) p.catch(()=>{}); };
+    videos.forEach(prep);
     if('IntersectionObserver' in window){
       const vio = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           const v = e.target;
-          if(e.isIntersecting){
-            if(v.preload === 'none') v.preload = 'auto';
-            const p = v.play();
-            if(p && p.catch) p.catch(()=>{});
-          } else {
-            v.pause();
-          }
+          if(e.isIntersecting){ if(v.preload === 'none') v.preload = 'auto'; tryPlay(v); }
+          else { v.pause(); }
         });
-      }, { threshold:0.25 });
+      }, { threshold:0.1 });
       videos.forEach(v => vio.observe(v));
+    } else {
+      videos.forEach(tryPlay);
     }
+    /* iOS / data-saver fallback: some mobiles block muted autoplay until the
+       first user gesture — kick any on-screen video on that first interaction. */
+    const kick = () => {
+      videos.forEach(v => { const r = v.getBoundingClientRect(); if(r.top < innerHeight && r.bottom > 0) tryPlay(v); });
+    };
+    ['touchstart','pointerdown','click','scroll'].forEach(ev =>
+      window.addEventListener(ev, kick, { once:true, passive:true }));
   }
 
   /* ---------- PRODUCT CATALOG FILTER (if present) ---------- */
@@ -225,6 +235,27 @@
       }
       window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
     });
+  });
+
+  /* ---------- SHOWCASE CAROUSEL (arrows + state) ---------- */
+  document.querySelectorAll('.sc-carousel').forEach(car => {
+    const track = car.querySelector('.sc-track');
+    if(!track) return;
+    const stepBy = () => {
+      const card = track.querySelector('.sc-card');
+      return card ? card.getBoundingClientRect().width + 16 : track.clientWidth * 0.8;
+    };
+    const prev = car.querySelector('.sc-prev');
+    const next = car.querySelector('.sc-next');
+    if(next) next.addEventListener('click', () => track.scrollBy({ left: stepBy(), behavior:'smooth' }));
+    if(prev) prev.addEventListener('click', () => track.scrollBy({ left: -stepBy(), behavior:'smooth' }));
+    const update = () => {
+      if(prev) prev.disabled = track.scrollLeft < 8;
+      if(next) next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    };
+    track.addEventListener('scroll', update, { passive:true });
+    window.addEventListener('resize', update, { passive:true });
+    update();
   });
 
   /* ---------- ACTIVE NAV HIGHLIGHT ---------- */
