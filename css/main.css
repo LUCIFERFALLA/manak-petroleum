@@ -34,10 +34,10 @@
   --pad-x:clamp(20px, 4vw, 64px);
 
   /* type — Fraunces (editorial-serif display) + Hanken Grotesk (premium grotesque body) + IBM Plex Mono (specs) */
-  --f-sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --f-display:'Fraunces',Georgia,'Times New Roman',serif;
-  --f-mono:'IBM Plex Mono',ui-monospace,'SF Mono',monospace;
-  --f-accent:'Fraunces',Georgia,serif;
+  --f-sans:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-display:'Norwester','Arial Narrow',Impact,sans-serif;
+  --f-mono:'Kollektif','Montserrat',system-ui,sans-serif;
+  --f-accent:'Norwester','Arial Narrow',sans-serif;
 
   /* spec aliases */
   --font-body:var(--f-sans);
@@ -78,7 +78,8 @@ img,svg,video{max-width:100%;display:block;height:auto}
 button{font:inherit;background:none;border:0;color:inherit;cursor:pointer;padding:0}
 input,textarea,select{font:inherit;color:inherit}
 h1,h2,h3,h4,h5,h6,p{margin:0}
-h1,h2,h3,h4,h5,h6{font-family:var(--f-display);font-weight:700}
+h1,h2,h3,h4,h5,h6{font-family:var(--f-display);font-weight:400}
+em,i{font-style:normal}
 ul,ol{margin:0;padding:0;list-style:none}
 
 /* ============ UTILS ============ */
@@ -501,11 +502,11 @@ em.accent{font-style:normal;color:var(--red);font-weight:inherit}
 .hero-left{max-width:780px}
 .hero-eyebrow{color:rgba(255,255,255,.82);margin-bottom:30px;display:inline-flex;align-items:center}
 .hero-title{
-  font-family:'Barlow Condensed',var(--f-display);font-weight:600;
-  font-size:clamp(38px,5.2vw,74px);line-height:1.02;letter-spacing:-0.015em;
-  color:#fff;margin-bottom:22px;
+  font-family:var(--f-display);font-weight:400;
+  font-size:clamp(36px,5vw,72px);line-height:1.06;letter-spacing:0.005em;
+  color:#fff;margin-bottom:26px;
 }
-.hero-title .accent{color:var(--red);font-style:normal;font-weight:700;opacity:1}
+.hero-title .accent{color:var(--red);font-style:normal;font-weight:400;opacity:1}
 .hero-lede{
   color:rgba(255,255,255,.85);font-size:clamp(16px,1.35vw,19px);line-height:1.6;
   max-width:56ch;margin-bottom:38px;
@@ -932,7 +933,7 @@ em.accent{font-style:normal;color:var(--red);font-weight:inherit}
   pointer-events:none;
 }
 .cta-block h2{font-weight:800;font-size:clamp(44px,8vw,140px);line-height:.95;letter-spacing:-0.045em;margin-bottom:48px;max-width:14ch}
-.cta-block h2 em{font-style:italic;font-weight:800;color:rgba(255,255,255,.55)}
+.cta-block h2 em{font-style:normal;font-weight:400;color:rgba(255,255,255,.55)}
 .cta-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;border-top:1px solid rgba(255,255,255,.25);padding-top:40px}
 .cta-col .l{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px;font-weight:500}
 .cta-col .v{font-size:22px;font-weight:600;letter-spacing:-0.01em;line-height:1.3}
@@ -983,7 +984,7 @@ em.accent{font-style:normal;color:var(--red);font-weight:inherit}
 .page-head .crumbs a:hover{color:var(--red)}
 .page-head .crumbs span{color:var(--ink)}
 .page-head h1{font-weight:700;font-optical-sizing:auto;font-size:clamp(48px,8vw,132px);line-height:.96;letter-spacing:-0.028em;margin-bottom:32px}
-.page-head h1 em{font-style:italic;color:var(--red);font-weight:800}
+.page-head h1 em{font-style:normal;color:var(--red);font-weight:400}
 .page-head-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-top:48px;border-top:1px solid var(--line);padding-top:36px}
 .page-head-grid p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:50ch}
 @media (max-width:780px){
@@ -1486,3 +1487,22 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 .wa-fab svg{width:24px;height:24px;fill:#fff}
 .wa-fab:hover{transform:scale(1.08);box-shadow:0 10px 26px rgba(37,211,102,.38)}
 @media print{.wa-fab{display:none}}
+
+/* ============================================================
+   CLIENT REVISION — hero breathing room + highlighted primary CTA
+   ============================================================ */
+.hero-eyebrow{margin-bottom:36px}
+.hero-sub{margin:24px 0 42px;max-width:46ch}
+.hero-cta{gap:18px;align-items:center}
+/* the Private Label CTA is the page's main focus — make it bigger & brighter */
+.btn.btn-hero-lg{
+  padding:18px 32px;font-size:15px;letter-spacing:.02em;
+  box-shadow:0 14px 34px rgba(200,16,46,.34);
+}
+.btn.btn-hero-lg:hover{box-shadow:0 18px 44px rgba(200,16,46,.46)}
+/* contact intent: two cards instead of three */
+.ci-grid.ci-grid-2{grid-template-columns:1fr 1fr;max-width:900px}
+@media (max-width:780px){.ci-grid.ci-grid-2{grid-template-columns:1fr}}
+/* a little more air between major sections (de-clutter) */
+.section-head{margin-bottom:clamp(40px,5vw,64px)}
+.section-head .desc{margin-top:22px}
