@@ -1506,3 +1506,49 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 /* a little more air between major sections (de-clutter) */
 .section-head{margin-bottom:clamp(40px,5vw,64px)}
 .section-head .desc{margin-top:22px}
+
+/* ============================================================
+   BLOG / RESOURCES — article + hub
+   ============================================================ */
+.blog-hub{padding:clamp(56px,9vw,128px) 0}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (max-width:780px){.blog-grid{grid-template-columns:1fr}}
+.blog-card{background:#fff;padding:36px 32px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:all .4s var(--ease-lux);text-decoration:none;color:inherit}
+.blog-card:hover{background:var(--paper-2)}
+.blog-card .meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);font-weight:500}
+.blog-card h3{font-size:24px;line-height:1.2;letter-spacing:-0.015em;margin:4px 0 4px}
+.blog-card p{font-size:14.5px;color:var(--mute);line-height:1.55}
+.blog-card .read{margin-top:auto;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:600;display:inline-flex;gap:8px;align-items:center}
+
+.article{padding:clamp(40px,6vw,72px) 0 clamp(56px,9vw,120px)}
+.article-wrap{max-width:760px;margin:0 auto;padding:0 var(--pad-x)}
+.article-meta{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.article-meta::before{content:"";width:24px;height:1px;background:var(--red)}
+.article h1{font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-0.025em;margin-bottom:18px}
+.article .lede{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:var(--mute);margin-bottom:40px;max-width:62ch}
+.article h2{font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-0.015em;margin:48px 0 16px}
+.article h3{font-size:20px;line-height:1.25;margin:32px 0 12px}
+.article p,.article li{font-size:16.5px;line-height:1.72;color:var(--ink-2);margin-bottom:16px}
+.article ul,.article ol{padding-left:22px;margin:0 0 20px}
+.article li{margin-bottom:8px}
+.article strong{color:var(--ink);font-weight:700}
+.article a{color:var(--red);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:opacity .25s}
+.article a:hover{opacity:.7}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14.5px}
+.article table th,.article table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.article table th{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);background:var(--paper-2);font-weight:600}
+.article blockquote{border-left:3px solid var(--red);padding:8px 0 8px 24px;margin:28px 0;font-size:18px;line-height:1.55;color:var(--ink-2)}
+.article-cta{margin:48px 0 0;padding:36px;background:var(--ink);color:#fff;border-radius:6px}
+.article-cta h3{color:#fff;font-size:24px;margin:0 0 10px}
+.article-cta p{color:#C8C5BC;font-size:15.5px;margin:0 0 20px}
+.article-cta .row{display:flex;gap:12px;flex-wrap:wrap}
+.faq-block{margin-top:48px;border-top:1px solid var(--line);padding-top:32px}
+.faq-block details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-block summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
+.faq-block summary::-webkit-details-marker{display:none}
+.faq-block summary::after{content:"+";color:var(--red);font-size:24px;font-weight:300;transition:transform .3s}
+.faq-block details[open] summary::after{transform:rotate(45deg)}
+.faq-block details p{margin:14px 0 4px;color:var(--mute);font-size:15.5px;line-height:1.65}
+.article-nav{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.article-nav a{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.article-nav a:hover{color:var(--red)}
