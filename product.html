@@ -293,7 +293,7 @@
         <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:32px">
           <div>
             <div class="eyebrow" style="margin-bottom:14px">/ Pack sizes</div>
-            <div style="font-size:15px">1 L · 5 L · 7.5 L · 10 L · 20 L · 50 L · 210 L drum</div>
+            <div id="packSizes" style="font-size:15px">1 L · 5 L · 7.5 L · 10 L · 20 L · 50 L · 210 L drum</div>
           </div>
           <div>
             <div class="eyebrow" style="margin-bottom:14px">/ Lead time</div>
@@ -311,9 +311,9 @@
   <div class="wrap">
     <div class="section-head">
       <span class="num reveal">Recommended applications</span>
-      <h2 class="reveal">Where this oil<br/>earns its keep.</h2>
+      <h2 class="reveal">Where it<br/>earns its keep.</h2>
     </div>
-    <div class="ind-grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="ind-grid" id="appGrid" style="grid-template-columns:repeat(4,1fr)">
       <div class="ind reveal"><span class="num">01</span><div><h4>Long-haul trucks</h4><div class="meta">Tippers · trailers · high-km diesel fleets</div></div></div>
       <div class="ind reveal"><span class="num">02</span><div><h4>Buses &amp; CV</h4><div class="meta">Intercity coaches · staff transport</div></div></div>
       <div class="ind reveal"><span class="num">03</span><div><h4>Construction</h4><div class="meta">Tippers · loaders · genset diesel engines</div></div></div>
@@ -330,7 +330,7 @@
       <span class="num reveal">Related products</span>
       <h2 class="reveal">Often specified alongside.</h2>
     </div>
-    <div class="rel-grid">
+    <div class="rel-grid" id="relGrid">
       <a href="product.html" class="product-card reveal-up">
         <div class="product-img" style="aspect-ratio:1;position:relative;border-bottom:1px solid var(--line)"><div class="prod-fill is-photo"><img loading="lazy" src="https://res.cloudinary.com/dij7gyend/image/upload/c_fill,g_center,w_800,h_800,q_auto,f_auto/v1782565596/Screenshot_2026-06-27_183219_mjwsnh.png" alt="ZIGMA SF/CD 20W-50"/></div></div>
         <div class="product-info"><div class="cat">ZIGMA · ENGINE OIL</div><h3>SF/CD 20W-50</h3><div class="grade">API SF/CD · 1 L</div></div>
@@ -357,6 +357,7 @@
   <div class="foot-bottom"><span>© Manak Petroleum 1973 — 2026</span><span>Manufactured in India · Dispatched Pan-India</span><span>ISO 9001:2015 · ISO 17025:2017</span></div>
 </div></footer>
 <script src="js/main.js?v=20260628b"></script>
+<script src="js/products-data.js?v=20260628b"></script>
 <elevenlabs-convai agent-id="agent_5401kw4fj654f5bvsajxsfztpg18"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
