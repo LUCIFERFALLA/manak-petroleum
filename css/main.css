@@ -1155,8 +1155,9 @@ em.accent{font-style:normal;color:var(--red);font-weight:inherit}
 .dropdown.mega.dd-right{left:auto;right:0}
 /* featured card inside mega */
 .dd-feature{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
-.dd-feature .ph{aspect-ratio:16/10;position:relative;border-bottom:1px solid var(--line);background:radial-gradient(120% 120% at 50% 30%,#fff 0%,#ECEAE3 100%)}
-.dd-feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10%}
+.dd-feature .ph{aspect-ratio:1/1;position:relative;border-bottom:1px solid var(--line);background:#0B0E13}
+.dd-feature .ph::before{display:none}
+.dd-feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;padding:0}
 .dd-feature .ft{padding:16px 18px}
 .dd-feature .ft .lab{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:600}
 .dd-feature .ft h5{font-size:18px;font-weight:700;letter-spacing:-0.015em;margin:6px 0 4px}
