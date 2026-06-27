@@ -1468,7 +1468,7 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
    ACCESSIBILITY — visible keyboard focus + keyboard-openable menus
    ============================================================ */
 :focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
-.btn:focus-visible,.nav-cta:focus-visible,.wa-fab:focus-visible{outline-offset:4px}
+.btn:focus-visible,.nav-cta:focus-visible,.nav-wa:focus-visible{outline-offset:4px}
 /* open mega-menus on keyboard focus, not just hover */
 .nav-item:focus-within > a .caret{transform:rotate(180deg)}
 .nav-item:focus-within > a::after{transform:scaleX(1)}
@@ -1476,17 +1476,24 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 .dropdown a.ddl:focus-visible{background:#F5F5F5;color:var(--red)}
 
 /* ============================================================
-   WHATSAPP — floating chat button + in-form button
+   WHATSAPP — header "Contact Us" button (bottom-right freed for chatbot)
    ============================================================ */
-.wa-fab{
-  position:fixed;right:clamp(14px,2.5vw,22px);bottom:clamp(14px,2.5vw,22px);z-index:120;
-  width:48px;height:48px;border-radius:50%;background:#25D366;
-  display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.20);
-  transition:transform .4s var(--ease-lux),box-shadow .4s var(--ease-lux);
+.nav-wa{
+  display:inline-flex;align-items:center;gap:8px;flex-shrink:0;
+  background:#25D366;color:#fff;border-radius:999px;
+  padding:9px 16px;font-size:13px;font-weight:600;letter-spacing:.01em;
+  transition:background .35s var(--ease-lux),transform .35s var(--ease-lux),box-shadow .35s var(--ease-lux);
+  margin-left:8px;line-height:1;
 }
-.wa-fab svg{width:24px;height:24px;fill:#fff}
-.wa-fab:hover{transform:scale(1.08);box-shadow:0 10px 26px rgba(37,211,102,.38)}
-@media print{.wa-fab{display:none}}
+.nav-wa svg{width:17px;height:17px;fill:currentColor;flex-shrink:0}
+.nav-wa:hover{background:#1ebe5a;transform:translateY(-1px);box-shadow:0 6px 16px rgba(37,211,102,.34)}
+.nav-wa:focus-visible{outline:2px solid #fff;outline-offset:3px}
+/* mobile: icon-only, stays visible (sits next to the burger) */
+@media (max-width:980px){
+  .nav-wa{padding:10px;margin-left:auto;margin-right:6px}
+  .nav-wa .lbl{display:none}
+}
+@media print{.nav-wa{display:none}}
 
 /* ============================================================
    CLIENT REVISION — hero breathing room + highlighted primary CTA
