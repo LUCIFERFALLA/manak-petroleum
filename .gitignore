@@ -13,3 +13,5 @@ node_modules/
 # secrets / local env (never deploy)
 .env
 .env.*
+# AI agent working files (upload to ElevenLabs, don't deploy as web pages)
+ai-agent/
