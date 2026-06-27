@@ -481,6 +481,9 @@ em.accent{font-style:normal;color:var(--red);font-weight:inherit}
 .prod-fill{position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 30%,#FFFFFF 0%,#F2F0EA 70%,#E9E6DE 100%);overflow:hidden}
 .prod-fill img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;padding:12%;transition:transform .5s var(--ease-out)}
 .product-card:hover .prod-fill img,.bento-card:hover .prod-fill img,.sc-card:hover .prod-fill img{transform:scale(1.04)}
+/* staged product photos (with their own background) fill the frame edge-to-edge */
+.prod-fill.is-photo{background:#0B0E13}
+.prod-fill.is-photo img{object-fit:cover;padding:0}
 
 /* ============ HERO — FULL-BLEED VIDEO (HOME) ============ */
 .hero-video{
@@ -1549,6 +1552,14 @@ a.ci-card:hover .ci-cta .ar{transform:translateX(4px)}
 .article-cta h3{color:#fff;font-size:24px;margin:0 0 10px}
 .article-cta p{color:#C8C5BC;font-size:15.5px;margin:0 0 20px}
 .article-cta .row{display:flex;gap:12px;flex-wrap:wrap}
+/* buttons must keep their own colour — override the red .article a link style */
+.article-cta .btn{color:#fff;text-decoration:none}
+.article-cta .btn-primary{background:var(--red);border-color:var(--red);color:#fff}
+.article-cta .btn-primary:hover{background:var(--red-2);border-color:var(--red-2);color:#fff}
+/* let the CTA band breathe wider than the reading column on laptops/desktops */
+@media (min-width:1000px){
+  .article-cta{margin-left:-44px;margin-right:-44px;padding:40px 44px}
+}
 .faq-block{margin-top:48px;border-top:1px solid var(--line);padding-top:32px}
 .faq-block details{border-bottom:1px solid var(--line);padding:18px 0}
 .faq-block summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
